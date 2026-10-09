@@ -1,0 +1,35 @@
+{
+  "siteUrl": "https://claraai.tech",
+  "basePath": "/blog",
+  "siteName": "Clara.ai",
+  "blogTitle": "Clara.ai Blog: AI chatbots, calling agents and operations dashboards",
+  "blogDescription": "Practical guides from Clara.ai on AI chatbots, AI calling agents and operations dashboards, with numbers from real deployments.",
+  "gaId": "G-JVLDX960N7",
+  "contactUrl": "https://claraai.tech/#contact",
+  "contactEmail": "yogansh@claraai.tech",
+  "authors": {
+    "Yogansh Banthia": { "role": "Founder & CEO, Clara.ai" }
+  },
+  "defaultCta": {
+    "heading": "See what this would look like in your business",
+    "text": "Clara.ai builds, deploys and manages AI chatbots, calling agents and operations dashboards. A version 1 demo is ready within 7 days of receiving your material."
+  },
+  "clientNamesNotAllowedInTitles": [
+    "KISNA", "One Reside", "Hiranandani", "Vijay Sales", "iDAC", "Nilkamal",
+    "Aditya Birla", "Rustomjee", "Zelenkofske", "Ergode", "Apex Hospitals", "The Hindu"
+  ],
+  "bannedTerms": ["MG Motor", "MG Oman", "Morris Garages"],
+  "limits": {
+    "titleMaxChars": 65,
+    "descriptionMinChars": 120,
+    "descriptionMaxChars": 160,
+    "minWords": 600,
+    "minH2": 3,
+    "minFaqs": 3,
+    "maxFaqs": 6,
+    "imageMaxKB": 150,
+    "imageMaxWidth": 1600,
+    "minImages": 1,
+    "maxImages": 6
+  }
+}

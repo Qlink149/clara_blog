@@ -1,0 +1,46 @@
+{
+  "title": "AI Chatbot for Jewellery Retail Lead Qualification",
+  "slug": "ai-chatbot-for-jewellery-retail-lead-qualification",
+  "description": "How an AI chatbot qualifies jewellery buyers on web and WhatsApp in seconds, books store visits and updates your CRM. Real deployment data included.",
+  "date": "2026-10-08",
+  "author": "Yogansh Banthia",
+  "category": "AI Chatbots · Jewellery Retail",
+  "keyword": "ai chatbot for jewellery retail lead qualification",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "AI chatbot for jewellery retail lead qualification, showing a WhatsApp chat that offers a store visit or callback",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions jewellery retailers ask about AI lead qualification chatbots",
+  "faqs": [
+    {
+      "q": "What results can an AI chatbot for jewellery retail lead qualification deliver?",
+      "a": "Results depend on your volumes and process, but one deployment shows the range. At KISNA Diamond & Gold, the first reply went from 4 to 6 hours to 4 to 6 seconds. Around 24% of people who messaged completed a store-visit or callback request, and the chatbot handled 89 of every 100 conversations without a person."
+    },
+    {
+      "q": "Can one chatbot work on both my website and WhatsApp?",
+      "a": "Yes. A well-built assistant runs from one knowledge base and one set of rules, then appears on your website, on WhatsApp, or both. The customer gets the same answers on either channel, and your CRM holds one record per lead. A buyer who switches from website chat to WhatsApp stays a single lead."
+    },
+    {
+      "q": "Will an AI chatbot replace my sales team?",
+      "a": "No. A lead qualification chatbot handles the first conversation: answering questions, collecting details and booking meetings. Your salespeople still run the meetings, negotiate and close. At KISNA Diamond & Gold, 11 of every 100 conversations go to a person, including qualified buyers who need a salesperson to convert them."
+    },
+    {
+      "q": "How long does it take to deploy a jewellery retail lead qualification chatbot?",
+      "a": "Clara.ai builds a version 1 demo within 7 days of receiving your material, such as product catalogues, price guidance and qualifying questions. Full deployment then depends on how many systems the chatbot must connect to. A focused first workflow, such as qualifying website and WhatsApp enquiries and booking store visits, is the fastest place to start."
+    },
+    {
+      "q": "What does a jewellery retail chatbot need to connect to?",
+      "a": "At minimum, a lead qualification chatbot needs your product catalogue and your CRM. Most also connect to a calendar for store-visit booking, and many connect to inventory so answers reflect real stock and store availability. Without these connections, your team still copies details by hand and the speed benefit is lost."
+    }
+  ],
+  "sources": [
+    "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+    "https://developers.facebook.com/docs/whatsapp/conversation-types/"
+  ],
+  "cta": {
+    "heading": "Every enquiry deserves an answer tonight",
+    "text": "Your leads are already arriving after hours, on your website and on WhatsApp. The question is whether they get an answer while they are still interested. To see what an AI chatbot for jewellery retail lead qualification would look like in your store, book a conversation with Clara.ai."
+  }
+}

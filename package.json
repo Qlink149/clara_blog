@@ -1,0 +1,14 @@
+{
+  "name": "clara-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static blog for claraai.tech/blog. Posts are folders in /posts; the build wraps them in the site template.",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs && node scripts/preview.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "sharp": "^0.33.5" }
+}
