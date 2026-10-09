@@ -22,6 +22,12 @@ const css = fs.readFileSync(path.join(ROOT, 'scripts', 'styles.css'), 'utf8');
 const cssFile = `blog.${crypto.createHash('sha1').update(css).digest('hex').slice(0, 8)}.css`;
 fs.writeFileSync(path.join(OUT, 'assets', cssFile), css);
 
+// The logo master is huge, and the page shows it at most 32px tall, so ship a 96px-tall (3x) copy.
+const logoBuf = await sharp(path.join(ROOT, config.logoFile)).resize({ height: 96 }).webp({ quality: 90 }).toBuffer();
+const logoFile = `logo.${crypto.createHash('sha1').update(logoBuf).digest('hex').slice(0, 8)}.webp`;
+fs.writeFileSync(path.join(OUT, 'assets', logoFile), logoBuf);
+const logoMeta = await sharp(logoBuf).metadata();
+
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const niceDate = (iso) => {
   const [y, m, d] = iso.split('-').map(Number);
@@ -30,10 +36,6 @@ const niceDate = (iso) => {
 const postUrl = (slug) => `${SITE}${BASE}/${slug}/`;
 const postPath = (slug) => `${BASE}/${slug}/`;
 const jsonLd = (obj) => `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, '\\u003c')}</script>`;
-const brand = () => {
-  const [a, b] = config.siteName.split('.');
-  return b ? `${e(a)}<span>.${e(b)}</span>` : e(config.siteName);
-};
 
 function head({ title, description, canonical, image, imageAlt, type, extra = '' }) {
   const ga = config.gaId
@@ -45,6 +47,7 @@ function head({ title, description, canonical, image, imageAlt, type, extra = ''
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070312">
 <title>${e(title)}</title>
 <meta name="description" content="${e(description)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -65,33 +68,55 @@ ${image ? `<meta property="og:image" content="${image}">
 <link rel="alternate" type="application/rss+xml" title="${e(config.siteName)} Blog" href="${SITE}${BASE}/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${BASE}/assets/${cssFile}">
 ${extra}
 ${ga}
 </head>`;
 }
 
-const topbar = (narrow) => `<div class="topbar${narrow ? ' narrow' : ''}">
-  <a class="wordmark" href="${SITE}/">${brand()}</a>
-  <nav>
-    <a class="plain" href="${BASE}/">Blog</a>
-    <a class="cta" href="${config.contactUrl}">Book a strategy call</a>
-  </nav>
-</div>`;
+const logo = (h) => `<img src="${BASE}/assets/${logoFile}" alt="${e(config.siteName)}" width="${Math.round((logoMeta.width * h) / logoMeta.height)}" height="${h}">`;
+const navLinks = () => config.nav.map((n) => `<a href="${n.href}"${n.href === `${BASE}/` ? ' aria-current="page"' : ''}>${e(n.label)}</a>`).join('\n      ');
+
+// Same header as the homepage: logo, five links, white button. The phone menu needs no JavaScript.
+const siteHeader = () => `<header class="site">
+  <div class="in">
+    <a class="logo" href="${SITE}/" aria-label="${e(config.siteName)} home">${logo(32)}</a>
+    <nav class="desktop" aria-label="Main">
+      ${navLinks()}
+    </nav>
+    <a class="pill cta-desktop" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a strategy call</a>
+    <details class="menu">
+      <summary aria-label="Menu">
+        <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </summary>
+      <nav aria-label="Main">
+      ${navLinks()}
+      <a class="pill" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a strategy call</a>
+      </nav>
+    </details>
+  </div>
+</header>`;
 
 const footer = () => `<footer class="site">
-  <div><a href="${SITE}/">Home</a><a href="${SITE}/#solutions">Solutions</a><a href="${BASE}/">Blog</a><a href="${config.contactUrl}">Contact</a></div>
-  <div>&copy; ${new Date().getUTCFullYear()} ${e(config.siteName)}</div>
+  <div class="in">
+    <a href="${SITE}/" aria-label="${e(config.siteName)} home">${logo(24)}</a>
+    <div class="tag">
+      <span>${e(config.footerTaglines[0])}</span>
+      <span class="extra">&bull;</span>
+      <span class="extra">${e(config.footerTaglines[1])}</span>
+    </div>
+  </div>
 </footer>`;
 
-const card = (p, tag = 'h2') => `<article class="card">
+const card = (p, tag = 'h2', featured = false) => `<article class="card${featured ? ' featured' : ''}">
   <a class="img" href="${postPath(p.meta.slug)}" tabindex="-1" aria-hidden="true"><img src="${postPath(p.meta.slug)}images/${p.meta.hero.file}" alt="" width="${p.heroSize.width}" height="${p.heroSize.height}" loading="lazy"></a>
   <div class="in">
-    <p class="eyebrow">${e(p.meta.category)}</p>
+    <p class="cat">${e(p.meta.category)}</p>
     <${tag}><a href="${postPath(p.meta.slug)}">${e(p.meta.title)}</a></${tag}>
     <p>${e(p.meta.description)}</p>
-    <time datetime="${p.meta.date}">${niceDate(p.meta.date)}</time>
+    <time datetime="${p.meta.date}">${niceDate(p.meta.date)}</time>${featured ? `\n    <a class="pill read" href="${postPath(p.meta.slug)}">Read the guide</a>` : ''}
   </div>
 </article>`;
 
@@ -153,16 +178,21 @@ function renderPost(p) {
 ${schema.map(jsonLd).join('\n')}`,
   })}
 <body>
-${topbar(true)}
-<main class="page">
-  <article>
-    <header class="hero">
+${siteHeader()}
+<main>
+<article>
+  <div class="band post">
+    <div class="in">
+      <p class="crumbs"><a href="${SITE}/">Home</a> &nbsp;/&nbsp; <a href="${BASE}/">Blog</a></p>
+      <p class="eyebrow">${e(m.category)}</p>
+      <h1>${e(m.title)}</h1>
+      <p class="byline">By <strong>${e(m.author)}</strong>${role ? `, ${e(role)}` : ''} &nbsp;&middot;&nbsp; <time datetime="${m.date}">${niceDate(m.date)}</time>${m.updated && m.updated !== m.date ? ` &nbsp;&middot;&nbsp; Updated <time datetime="${m.updated}">${niceDate(m.updated)}</time>` : ''}</p>
+    </div>
+  </div>
+  <div class="page">
+    <div class="hero">
       <img src="${postPath(m.slug)}images/${m.hero.file}" alt="${e(m.hero.alt)}" width="${p.heroSize.width}" height="${p.heroSize.height}" fetchpriority="high">
-    </header>
-    <p class="crumbs"><a href="${SITE}/">Home</a> &rsaquo; <a href="${BASE}/">Blog</a></p>
-    <p class="eyebrow">${e(m.category)}</p>
-    <h1>${e(m.title)}</h1>
-    <p class="byline">By ${e(m.author)}${role ? `, ${e(role)}` : ''} &nbsp;&middot;&nbsp; <time datetime="${m.date}">${niceDate(m.date)}</time>${m.updated && m.updated !== m.date ? ` &nbsp;&middot;&nbsp; Updated <time datetime="${m.updated}">${niceDate(m.updated)}</time>` : ''}</p>
+    </div>
 
 ${body}
 
@@ -177,23 +207,27 @@ ${m.sources.length ? `
 ${m.sources.map((s) => `        <li><a href="${e(s)}" target="_blank" rel="noopener">${e(s)}</a></li>`).join('\n')}
       </ul>
     </section>` : ''}
-  </article>
 
-  <div class="cta-box">
-    <h2>${e(cta.heading)}</h2>
-    <p>${e(cta.text)}</p>
-    <div class="btns">
-      <a class="btn" href="${config.contactUrl}">Book a strategy call</a>
-      <a class="btn ghost" href="mailto:${config.contactEmail}">${e(config.contactEmail)}</a>
-    </div>
+    <aside class="cta-box">
+      <h2>${e(cta.heading)}</h2>
+      <p>${e(cta.text)}</p>
+      <div class="btns">
+        <a class="pill lg" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a strategy call</a>
+        <a class="pill lg ghost" href="mailto:${config.contactEmail}">${e(config.contactEmail)}</a>
+      </div>
+    </aside>
   </div>
+</article>
 ${others.length ? `
-  <section class="more">
+<section class="more">
+  <div class="in">
+    <p class="label">Keep reading</p>
     <h2>More from the ${e(config.siteName)} blog</h2>
     <div class="cards">
 ${others.map((x) => card(x, 'h3')).join('\n')}
     </div>
-  </section>` : ''}
+  </div>
+</section>` : ''}
 </main>
 ${footer()}
 </body>
@@ -221,16 +255,20 @@ function renderIndex() {
       blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.meta.title, url: postUrl(p.meta.slug), datePublished: p.meta.date })),
     }),
   })}
-<body>
-${topbar(false)}
-<main class="page wide">
-  <div class="index-head">
-    <p class="eyebrow">Blog</p>
-    <h1>${e(config.siteName)} Blog</h1>
-    <p>${e(config.blogDescription)}</p>
+<body class="dark">
+${siteHeader()}
+<main>
+  <div class="band index">
+    <div class="in">
+      <p class="eyebrow">${e(config.siteName)} Blog</p>
+      <h1>${e(config.blogHeading.plain)} <span class="grad">${e(config.blogHeading.gradient)}</span></h1>
+      <p class="lede">${e(config.blogDescription)}</p>
+    </div>
   </div>
-  <div class="cards">
-${posts.map((p) => card(p)).join('\n') || '    <p>No posts yet.</p>'}
+  <div class="listing">
+    <div class="cards">
+${posts.map((p, i) => card(p, 'h2', i === 0)).join('\n') || '      <p>No posts yet.</p>'}
+    </div>
   </div>
 </main>
 ${footer()}
@@ -298,6 +336,6 @@ fs.writeFileSync(
 // The project's own address only exists to feed claraai.tech/blog, so send stray visitors there.
 const bounce = `<!doctype html><meta charset="utf-8"><title>${e(config.siteName)} Blog</title><link rel="canonical" href="${SITE}${BASE}/"><meta http-equiv="refresh" content="0; url=${BASE}/"><a href="${BASE}/">${e(config.siteName)} Blog</a>`;
 fs.writeFileSync(path.join(DIST, 'index.html'), bounce);
-fs.writeFileSync(path.join(DIST, '404.html'), `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found | ${e(config.siteName)}</title><link rel="stylesheet" href="${BASE}/assets/${cssFile}"><main class="page"><h1 style="margin-top:80px">Page not found</h1><p><a href="${BASE}/">Back to the blog</a></p></main>`);
+fs.writeFileSync(path.join(DIST, '404.html'), `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found | ${e(config.siteName)}</title><link rel="stylesheet" href="${BASE}/assets/${cssFile}"><body class="dark"><div class="band index"><div class="in"><h1>Page not found</h1><p class="lede"><a class="pill" href="${BASE}/">Back to the blog</a></p></div></div>`);
 
 console.log(`\nBuilt ${posts.length} post(s) into dist${BASE}/`);

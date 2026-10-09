@@ -8,17 +8,33 @@
   "contactUrl": "https://claraai.tech/#contact",
   "contactEmail": "yogansh@claraai.tech",
   "authors": {
-    "Yogansh Banthia": { "role": "Founder & CEO, Clara.ai" }
+    "Yogansh Banthia": {
+      "role": "Founder & CEO, Clara.ai"
+    }
   },
   "defaultCta": {
     "heading": "See what this would look like in your business",
     "text": "Clara.ai builds, deploys and manages AI chatbots, calling agents and operations dashboards. A version 1 demo is ready within 7 days of receiving your material."
   },
   "clientNamesNotAllowedInTitles": [
-    "KISNA", "One Reside", "Hiranandani", "Vijay Sales", "iDAC", "Nilkamal",
-    "Aditya Birla", "Rustomjee", "Zelenkofske", "Ergode", "Apex Hospitals", "The Hindu"
+    "KISNA",
+    "One Reside",
+    "Hiranandani",
+    "Vijay Sales",
+    "iDAC",
+    "Nilkamal",
+    "Aditya Birla",
+    "Rustomjee",
+    "Zelenkofske",
+    "Ergode",
+    "Apex Hospitals",
+    "The Hindu"
   ],
-  "bannedTerms": ["MG Motor", "MG Oman", "Morris Garages"],
+  "bannedTerms": [
+    "MG Motor",
+    "MG Oman",
+    "Morris Garages"
+  ],
   "limits": {
     "titleMaxChars": 65,
     "descriptionMinChars": 120,
@@ -31,5 +47,37 @@
     "imageMaxWidth": 1600,
     "minImages": 1,
     "maxImages": 6
+  },
+  "logoFile": "assets/brand/clara-logo-white.png",
+  "ctaUrl": "https://wa.me/918696979791?text=Hello%2C%0AI%20am%20ready%20to%20implement%20AI%20in%20my%20business!",
+  "nav": [
+    {
+      "label": "Why Clara",
+      "href": "https://claraai.tech/#about"
+    },
+    {
+      "label": "Solutions",
+      "href": "https://claraai.tech/#solutions"
+    },
+    {
+      "label": "Case Studies",
+      "href": "https://claraai.tech/#case-studies"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "Contact",
+      "href": "https://claraai.tech/#contact"
+    }
+  ],
+  "footerTaglines": [
+    "AI implementation partner for businesses",
+    "Enterprise systems, thoughtfully deployed"
+  ],
+  "blogHeading": {
+    "plain": "Field notes on",
+    "gradient": "AI that ships."
   }
 }
