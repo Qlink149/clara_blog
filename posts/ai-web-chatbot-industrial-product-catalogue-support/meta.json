@@ -1,0 +1,45 @@
+{
+  "title": "AI Web Chatbot for Industrial Product Catalogue Support",
+  "slug": "ai-web-chatbot-industrial-product-catalogue-support",
+  "description": "See how an AI web chatbot for industrial product catalogue support answers technical questions after hours and hands quotes to your engineers with context.",
+  "date": "2026-10-10",
+  "author": "Yogansh Banthia",
+  "category": "AI Chatbots · Industrial Manufacturing",
+  "keyword": "ai web chatbot for industrial product catalogue support",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "AI web chatbot for industrial product catalogue support, shown as a chat window linked to product datasheets",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions manufacturers ask about catalogue support chatbots",
+  "faqs": [
+    {
+      "q": "How much does an AI web chatbot for a product catalogue cost?",
+      "a": "Cost depends on the size of the catalogue, the systems the chatbot connects to and the channels you want. Clara.ai prices the work after the diagnosis, once the scope is clear. A strategy call is the quickest way to get a first view."
+    },
+    {
+      "q": "How long until it is live on our website?",
+      "a": "Clara.ai builds a version 1 demo within 7 days of receiving your datasheets, product tables and past enquiries. Go-live then depends on catalogue size, the number of integrations and how quickly your engineers agree the handover rules."
+    },
+    {
+      "q": "What systems can the chatbot connect to?",
+      "a": "Typically a CRM and email, so enquiries land where your team already works, plus your product data sources, such as a document library or product database. The exact list is confirmed during diagnosis."
+    },
+    {
+      "q": "Does it replace our website search or PDF catalogue?",
+      "a": "No. It sits alongside both. Search still suits buyers with an exact part number, and the datasheets remain the reference. The chatbot is for buyers who start with a problem."
+    },
+    {
+      "q": "Can the same chatbot answer on WhatsApp?",
+      "a": "Yes. The same assistant can run on your website and on WhatsApp from one set of documents and rules. On WhatsApp, a business can reply freely for 24 hours after the customer's last message, and after that only with pre-approved template messages."
+    }
+  ],
+  "sources": [
+    "https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+  ],
+  "cta": {
+    "heading": "Want to see your own catalogue in a conversation?",
+    "text": "Your buyers are already asking technical questions after hours. To see what an AI web chatbot for industrial product catalogue support would look like on your website, book a strategy call with Clara.ai."
+  }
+}
