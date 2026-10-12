@@ -6,4 +6,6 @@ The bot changes only the status and slug columns of the row it publishes.
 | Status | Keyword | Angle / notes | Slug |
 |--------|---------|---------------|------|
 | done | ai chatbot for jewellery retail lead qualification | KISNA as proof | ai-chatbot-for-jewellery-retail-lead-qualification |
-| preview | operations intelligence dashboard for multi-branch retail | Definition, Saudi/Gulf, dashboard service | operations-intelligence-dashboard-multi-branch-retail |
+| done | ai web chatbot for industrial product catalogue support | USA/Canada, Tempsens demo | ai-web-chatbot-industrial-product-catalogue-support |
+| done | operations intelligence dashboard for multi-branch retail | Definition, Saudi/Gulf, dashboard service | operations-intelligence-dashboard-multi-branch-retail |
+| preview | ai calling agent for real estate lead follow-up | Problem-led, Europe, calling agent; Hiranandani Parks + Rustomjee named, no numbers | ai-calling-agent-for-real-estate-lead-follow-up |
