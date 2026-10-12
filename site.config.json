@@ -1,20 +1,20 @@
 {
   "siteUrl": "https://claraai.tech",
   "basePath": "/blog",
-  "siteName": "Clara.ai",
-  "blogTitle": "Clara.ai Blog: AI chatbots, calling agents and operations dashboards",
-  "blogDescription": "Practical guides from Clara.ai on AI chatbots, AI calling agents and operations dashboards, with numbers from real deployments.",
+  "siteName": "Clara AI",
+  "blogTitle": "Clara AI Blog: AI chatbots, calling agents and operations dashboards",
+  "blogDescription": "Practical guides from Clara AI on AI chatbots, AI calling agents and operations dashboards, with numbers from real deployments.",
   "gaId": "G-JVLDX960N7",
   "contactUrl": "https://claraai.tech/#contact",
   "contactEmail": "yogansh@claraai.tech",
   "authors": {
     "Yogansh Banthia": {
-      "role": "Founder & CEO, Clara.ai"
+      "role": "Founder & CEO, Clara AI"
     }
   },
   "defaultCta": {
     "heading": "See what this would look like in your business",
-    "text": "Clara.ai builds, deploys and manages AI chatbots, calling agents and operations dashboards. A version 1 demo is ready within 7 days of receiving your material."
+    "text": "Clara AI builds, deploys and manages AI chatbots, calling agents and operations dashboards. A version 1 demo is ready within 7 days of receiving your material."
   },
   "clientNamesNotAllowedInTitles": [
     "KISNA",

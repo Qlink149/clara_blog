@@ -16,11 +16,11 @@
   "faqs": [
     {
       "q": "How much does an operations intelligence dashboard cost?",
-      "a": "Cost depends on the number of data sources, the number of branches and the measures you want. Clara.ai prices the work after diagnosis, once the scope is clear."
+      "a": "Cost depends on the number of data sources, the number of branches and the measures you want. Clara AI prices the work after diagnosis, once the scope is clear."
     },
     {
       "q": "Can it work with the point-of-sale and CRM we already use?",
-      "a": "Usually, yes. Most systems can export data or connect through an API. Clara.ai confirms what is possible for your tools during diagnosis, before any build starts."
+      "a": "Usually, yes. Most systems can export data or connect through an API. Clara AI confirms what is possible for your tools during diagnosis, before any build starts."
     },
     {
       "q": "How is this different from the reports our BI tool already produces?",
@@ -38,6 +38,6 @@
   "sources": [],
   "cta": {
     "heading": "Want to see your branches in one view?",
-    "text": "Book a strategy call with Clara.ai."
+    "text": "Book a strategy call with Clara AI."
   }
 }
