@@ -8,7 +8,7 @@
   "keyword": "ai web chatbot for industrial product catalogue support",
   "hero": {
     "file": "hero.webp",
-    "alt": "AI web chatbot for industrial product catalogue support, shown as a chat window linked to product datasheets",
+    "alt": "AI web chatbot for industrial product catalogue support linked to datasheets",
     "width": 1600,
     "height": 900
   },
@@ -16,11 +16,11 @@
   "faqs": [
     {
       "q": "How much does an AI web chatbot for a product catalogue cost?",
-      "a": "Cost depends on the size of the catalogue, the systems the chatbot connects to and the channels you want. Clara.ai prices the work after the diagnosis, once the scope is clear. A strategy call is the quickest way to get a first view."
+      "a": "Cost depends on the size of the catalogue, the systems the chatbot connects to and the channels you want. Clara AI prices the work after the diagnosis, once the scope is clear. A strategy call is the quickest way to get a first view."
     },
     {
       "q": "How long until it is live on our website?",
-      "a": "Clara.ai builds a version 1 demo within 7 days of receiving your datasheets, product tables and past enquiries. Go-live then depends on catalogue size, the number of integrations and how quickly your engineers agree the handover rules."
+      "a": "Clara AI builds a version 1 demo within 7 days of receiving your datasheets, product tables and past enquiries. Go-live then depends on catalogue size, the number of integrations and how quickly your engineers agree the handover rules."
     },
     {
       "q": "What systems can the chatbot connect to?",
@@ -40,6 +40,6 @@
   ],
   "cta": {
     "heading": "Want to see your own catalogue in a conversation?",
-    "text": "Your buyers are already asking technical questions after hours. To see what an AI web chatbot for industrial product catalogue support would look like on your website, book a strategy call with Clara.ai."
+    "text": "Your buyers are already asking technical questions after hours. To see what an AI web chatbot for industrial product catalogue support would look like on your website, book a strategy call with Clara AI."
   }
 }
