@@ -1,0 +1,43 @@
+{
+  "title": "Operations Intelligence Dashboard for Multi-Branch Retail",
+  "slug": "operations-intelligence-dashboard-multi-branch-retail",
+  "description": "An operations intelligence dashboard for multi-branch retail shows branch sales, stock and response times in one view. Here is how it works in the Gulf.",
+  "date": "2026-10-12",
+  "author": "Yogansh Banthia",
+  "category": "Operations Intelligence · Multi-Branch Retail",
+  "keyword": "operations intelligence dashboard for multi-branch retail",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "Operations intelligence dashboard for multi-branch retail, shown as a dashboard window linked to three storefronts",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions retailers ask about operations intelligence dashboards",
+  "faqs": [
+    {
+      "q": "How much does an operations intelligence dashboard cost?",
+      "a": "Cost depends on the number of data sources, the number of branches and the measures you want. Clara.ai prices the work after diagnosis, once the scope is clear."
+    },
+    {
+      "q": "Can it work with the point-of-sale and CRM we already use?",
+      "a": "Usually, yes. Most systems can export data or connect through an API. Clara.ai confirms what is possible for your tools during diagnosis, before any build starts."
+    },
+    {
+      "q": "How is this different from the reports our BI tool already produces?",
+      "a": "A BI tool shows what you tell it to show. This dashboard is designed around your branch operations, including enquiries and response times that many BI setups leave out. It can sit on top of your existing reporting."
+    },
+    {
+      "q": "Do we need a chatbot first?",
+      "a": "No. The dashboard works from sales, stock and CRM data alone. Adding a chatbot or calling agent gives it enquiry data as well."
+    },
+    {
+      "q": "Who sees the dashboard?",
+      "a": "You decide. Most retailers give branch managers their own branch, regional managers their region and head office the full picture."
+    }
+  ],
+  "sources": [],
+  "cta": {
+    "heading": "Want to see your branches in one view?",
+    "text": "Book a strategy call with Clara.ai."
+  }
+}
