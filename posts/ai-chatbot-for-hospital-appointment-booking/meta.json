@@ -1,0 +1,45 @@
+{
+  "title": "AI Chatbot for Hospital Appointment Booking in the Gulf",
+  "slug": "ai-chatbot-for-hospital-appointment-booking",
+  "description": "An AI chatbot for hospital appointment booking answers, books and reschedules on WhatsApp and the website in Arabic, English and Hindi, with staff handover.",
+  "date": "2026-10-14",
+  "author": "Yogansh Banthia",
+  "category": "AI Chatbots \u00b7 Healthcare",
+  "keyword": "ai chatbot for hospital appointment booking",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "AI chatbot for hospital appointment booking on a phone, with an appointment booked",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions hospitals ask about appointment chatbots",
+  "faqs": [
+    {
+      "q": "How much does an AI chatbot for a hospital cost?",
+      "a": "Cost depends on the number of sites, doctors and departments, the languages, the channels and the systems the chatbot connects to. Clara AI sets the scope after a diagnosis and then shares a clear proposal."
+    },
+    {
+      "q": "How long does it take to go live?",
+      "a": "Go-live depends on the number of sites, the integrations with your scheduling system and how quickly your teams approve the handover rules. Clara AI confirms a timeline after diagnosis, based on your actual material."
+    },
+    {
+      "q": "Which hospital systems can the chatbot connect to?",
+      "a": "Typically your appointment or scheduling system, your CRM and email, so bookings and handovers appear where staff already work. Where a direct connection is not possible, we agree a workable alternative during diagnosis."
+    },
+    {
+      "q": "Do patients need to download an app?",
+      "a": "No. Patients use WhatsApp, which they already have, or the chat on your website."
+    },
+    {
+      "q": "Can one chatbot serve several hospitals and clinics?",
+      "a": "Yes. The same assistant can serve several sites, with each location's doctors, hours and accepted insurers set up separately. The details are confirmed during diagnosis."
+    }
+  ],
+  "sources": [
+    "https://developers.facebook.com/docs/whatsapp/conversation-types/"
+  ],
+  "cta": {
+    "heading": "Want appointment requests answered at any hour?",
+    "text": "Book a strategy call with Clara AI."
+  }
+}
