@@ -3,11 +3,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { execSync } from 'node:child_process';
 import sharp from 'sharp';
 import { ROOT, config, escapeHtml as e, loadAndValidate, report } from './lib.mjs';
 
 const BASE = config.basePath; // "/blog"
-const SITE = config.siteUrl; // "https://claraai.tech"
+const SITE = config.siteUrl; // "https://www.claraai.tech"
 const DIST = path.join(ROOT, 'dist');
 const OUT = path.join(DIST, BASE);
 
@@ -35,6 +36,7 @@ const niceDate = (iso) => {
 };
 const postUrl = (slug) => `${SITE}${BASE}/${slug}/`;
 const postPath = (slug) => `${BASE}/${slug}/`;
+const ORG = { '@type': 'Organization', name: config.siteName, url: `${SITE}/`, logo: { '@type': 'ImageObject', url: `${SITE}${BASE}/assets/${logoFile}`, width: logoMeta.width, height: logoMeta.height }, ...(Array.isArray(config.sameAs) && config.sameAs.length ? { sameAs: config.sameAs } : {}) };
 const jsonLd = (obj) => `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, '\\u003c')}</script>`;
 
 function head({ title, description, canonical, image, imageAlt, type, extra = '' }) {
@@ -128,7 +130,8 @@ function renderPost(p) {
   const body = p.body
     .replace(/(<img\b[^>]*\ssrc=")images\//gi, `$1${postPath(m.slug)}images/`)
     .replace(/<table\b[\s\S]*?<\/table>/gi, (t) => `<div class="table-wrap">${t}</div>`)
-    .replace(/<a\b([^>]*href="https:\/\/(?!claraai\.tech)[^"]*"[^>]*)>/gi, (tag, inner) =>
+    .replace(/href="https:\/\/claraai\.tech(?=[\/"#])/gi, `href="${SITE}`)
+    .replace(/<a\b([^>]*href="https:\/\/(?!(?:www\.)?claraai\.tech)[^"]*"[^>]*)>/gi, (tag, inner) =>
       /\srel=/.test(inner) ? tag : `<a${inner.replace(/\starget="[^"]*"/, '')} target="_blank" rel="noopener">`);
   const cta = m.cta || config.defaultCta;
   const others = posts.filter((x) => x !== p).slice(0, 3);
@@ -144,7 +147,7 @@ function renderPost(p) {
       datePublished: `${m.date}T00:00:00+05:30`,
       dateModified: `${m.updated || m.date}T00:00:00+05:30`,
       author: { '@type': 'Person', name: m.author, ...(role ? { jobTitle: role } : {}), url: `${SITE}/` },
-      publisher: { '@type': 'Organization', name: config.siteName, url: `${SITE}/` },
+      publisher: ORG,
       keywords: m.keyword,
       wordCount: p.words,
     },
@@ -251,7 +254,7 @@ function renderIndex() {
       name: `${config.siteName} Blog`,
       url,
       description: config.blogDescription,
-      publisher: { '@type': 'Organization', name: config.siteName, url: `${SITE}/` },
+      publisher: ORG,
       blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.meta.title, url: postUrl(p.meta.slug), datePublished: p.meta.date })),
     }),
   })}
@@ -292,7 +295,9 @@ for (const p of posts) {
 fs.writeFileSync(path.join(OUT, 'index.html'), renderIndex());
 
 // ---- sitemap, feed, list for the bot ----
-const lastmod = (p) => p.meta.updated || p.meta.date;
+// lastmod = the newest of meta.updated, meta.date and the post folder's last git commit, so edits show up.
+const gitDate = (slug) => { try { return execSync(`git log -1 --format=%cs -- posts/${slug}`, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch { return ''; } };
+const lastmod = (p) => [p.meta.updated, p.meta.date, gitDate(p.meta.slug)].filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d || '')).sort().pop();
 const newest = posts.map(lastmod).sort().pop();
 fs.writeFileSync(
   path.join(OUT, 'sitemap.xml'),

@@ -1,11 +1,11 @@
 {
-  "siteUrl": "https://claraai.tech",
+  "siteUrl": "https://www.claraai.tech",
   "basePath": "/blog",
   "siteName": "Clara AI",
   "blogTitle": "Clara AI Blog: AI chatbots, calling agents and operations dashboards",
-  "blogDescription": "Practical guides from Clara AI on AI chatbots, AI calling agents and operations dashboards, with numbers from real deployments.",
+  "blogDescription": "Practical guides on AI chatbots, AI calling agents and operations dashboards from Clara AI, with real client examples.",
   "gaId": "G-JVLDX960N7",
-  "contactUrl": "https://claraai.tech/#contact",
+  "contactUrl": "https://www.claraai.tech/#contact",
   "contactEmail": "yogansh@claraai.tech",
   "authors": {
     "Yogansh Banthia": {
@@ -53,15 +53,15 @@
   "nav": [
     {
       "label": "Why Clara",
-      "href": "https://claraai.tech/#about"
+      "href": "https://www.claraai.tech/#about"
     },
     {
       "label": "Solutions",
-      "href": "https://claraai.tech/#solutions"
+      "href": "https://www.claraai.tech/#solutions"
     },
     {
       "label": "Case Studies",
-      "href": "https://claraai.tech/#case-studies"
+      "href": "https://www.claraai.tech/#case-studies"
     },
     {
       "label": "Blog",
@@ -69,7 +69,7 @@
     },
     {
       "label": "Contact",
-      "href": "https://claraai.tech/#contact"
+      "href": "https://www.claraai.tech/#contact"
     }
   ],
   "footerTaglines": [

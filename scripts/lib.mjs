@@ -154,6 +154,7 @@ export function validatePost(post, allPosts) {
 
   // ---- links ----
   const site = new URL(config.siteUrl);
+  const bareHost = site.hostname.replace(/^www\./, ''); // posts link to the bare host; the build rewrites to siteUrl
   const links = [...body.matchAll(/<a\b[^>]*>/gi)].map((x) => attr(x[0], 'href'));
   const external = new Set();
   for (const href of links) {
@@ -162,8 +163,8 @@ export function validatePost(post, allPosts) {
     let u;
     try { u = new URL(href); } catch { err(`body.html: link "${href}" must be a full https:// address`); continue; }
     if (u.protocol !== 'https:') err(`body.html: link "${href}" must use https`);
-    if (u.hostname === `www.${site.hostname}`) err(`body.html: link "${href}" must use ${site.hostname} without www`);
-    else if (u.hostname !== site.hostname) external.add(href);
+    if (u.hostname === `www.${bareHost}`) err(`body.html: link "${href}" must use ${bareHost} without www`);
+    else if (u.hostname !== bareHost) external.add(href);
   }
   if (Array.isArray(m.sources)) {
     for (const href of external) if (!m.sources.includes(href)) err(`body.html links to ${href} but it is not listed in meta.json "sources"`);
