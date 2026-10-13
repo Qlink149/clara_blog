@@ -1,0 +1,45 @@
+{
+  "title": "AI Calling Agent for Real Estate Lead Follow-Up",
+  "slug": "ai-calling-agent-for-real-estate-lead-follow-up",
+  "description": "An AI calling agent for real estate lead follow-up phones new enquiries within minutes, qualifies them and books viewings. See how it works in Europe.",
+  "date": "2026-10-13",
+  "author": "Yogansh Banthia",
+  "category": "AI Calling Agents \u00b7 Real Estate",
+  "keyword": "ai calling agent for real estate lead follow-up",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "AI calling agent for real estate lead follow-up beside an apartment building",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions real estate teams ask about AI calling agents",
+  "faqs": [
+    {
+      "q": "How much does an AI calling agent for lead follow-up cost?",
+      "a": "Cost depends on call volume, the number of languages and the systems it connects to. Clara AI prices the work after the diagnosis, once the scope is clear."
+    },
+    {
+      "q": "Which European languages can it speak?",
+      "a": "That depends on your markets. We confirm the languages during diagnosis and test each one on real enquiry examples before launch."
+    },
+    {
+      "q": "Will it connect to our CRM and property portal leads?",
+      "a": "Typically it reads new leads from your portal or form feeds and writes call outcomes back to your CRM. The exact connections are confirmed during diagnosis."
+    },
+    {
+      "q": "How long does it take to go live?",
+      "a": "Go-live depends on the number of languages, call flows and CRM connections. Clara AI confirms a timeline after diagnosis, based on your actual material."
+    },
+    {
+      "q": "Can it call people who did not enquire?",
+      "a": "We design it for people who have enquired and given their number. Rules on outbound calling vary by country, so we advise against cold calling and recommend checking with your legal adviser."
+    }
+  ],
+  "sources": [
+    "https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+  ],
+  "cta": {
+    "heading": "Want to see follow-up that starts in minutes?",
+    "text": "Book a strategy call with Clara AI."
+  }
+}
