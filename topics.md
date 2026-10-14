@@ -9,4 +9,4 @@ The bot changes only the status and slug columns of the row it publishes.
 | done | ai web chatbot for industrial product catalogue support | USA/Canada, Tempsens demo | ai-web-chatbot-industrial-product-catalogue-support |
 | done | operations intelligence dashboard for multi-branch retail | Definition, Saudi/Gulf, dashboard service | operations-intelligence-dashboard-multi-branch-retail |
 | done | ai calling agent for real estate lead follow-up | Problem-led, Europe, calling agent; Hiranandani Parks + Rustomjee named, no numbers | ai-calling-agent-for-real-estate-lead-follow-up |
-| preview | ai chatbot for hospital appointment booking | Problem-led, Saudi/UAE, chatbot (WhatsApp + web); Apex Hospitals named, no numbers; Arabic/English/Hindi | ai-chatbot-for-hospital-appointment-booking |
+| done | ai chatbot for hospital appointment booking | Problem-led, Saudi/UAE, chatbot (WhatsApp + web); Apex Hospitals named, no numbers; Arabic/English/Hindi | ai-chatbot-for-hospital-appointment-booking |
