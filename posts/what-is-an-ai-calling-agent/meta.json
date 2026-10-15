@@ -1,0 +1,42 @@
+{
+  "title": "What Is an AI Calling Agent and How Does It Work?",
+  "slug": "what-is-an-ai-calling-agent",
+  "description": "What is an AI calling agent? A plain-English guide to how it dials, answers, qualifies callers, updates your CRM and hands over to your team with full context.",
+  "date": "2026-10-16",
+  "author": "Yogansh Banthia",
+  "category": "AI Calling Agents",
+  "keyword": "what is an ai calling agent",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "What is an AI calling agent: a headset with flowing voice waves",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions businesses ask about AI calling agents",
+  "faqs": [
+    {
+      "q": "How much does an AI calling agent cost?",
+      "a": "Cost depends on call volume, the languages, the call flows and the systems it connects to. Clara AI sets the scope after a diagnosis and then shares a clear proposal."
+    },
+    {
+      "q": "How long does it take to go live?",
+      "a": "Go-live depends on the call flows and the number of connections to your CRM and phone system. Clara AI confirms a timeline after diagnosis, based on your actual material."
+    },
+    {
+      "q": "Which systems can it connect to?",
+      "a": "Typically your CRM, calendar and phone system, so bookings and call notes appear where your team already works. The exact list is confirmed during diagnosis."
+    },
+    {
+      "q": "Can it transfer a call to a person?",
+      "a": "Yes. It can transfer to a named team during staffed hours, or book a callback at a time the caller chooses. It always passes on a summary of the conversation."
+    }
+  ],
+  "sources": [
+    "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal",
+    "https://crtc.gc.ca/eng/phone/telemarketing/"
+  ],
+  "cta": {
+    "heading": "Want to hear your own calls handled by an agent?",
+    "text": "Book a strategy call with Clara AI."
+  }
+}
