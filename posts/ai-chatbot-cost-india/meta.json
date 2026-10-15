@@ -1,0 +1,42 @@
+{
+  "title": "How Much Does an AI Chatbot Cost in India?",
+  "slug": "ai-chatbot-cost-india",
+  "description": "Compare AI chatbot cost in India: rule-based, SaaS and custom builds, what drives the price, per-conversation fees and when custom wins.",
+  "date": "2026-10-15",
+  "author": "Yogansh Banthia",
+  "category": "AI Chatbots · Cost Guides",
+  "keyword": "ai chatbot cost in india",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "AI chatbot cost India guide with a phone showing a chat and pricing comparison screen",
+    "width": 1600,
+    "height": 900
+  },
+  "faqs": [
+    {
+      "q": "How much does an AI chatbot cost per month in India?",
+      "a": "On SaaS and WhatsApp platforms, one public guide lists published plans from ₹1,500 to ₹16,999 a month plus 18% GST, depending on the vendor and tier. Meta's WhatsApp fees, chatbot add-ons and per-conversation AI fees can come on top. A custom chatbot is usually a one-time build plus monthly running costs, so compare the three-year total, not just the first month."
+    },
+    {
+      "q": "Is a custom AI chatbot always more expensive than a SaaS chatbot?",
+      "a": "No. A custom build costs more upfront, but SaaS fees can overtake it when AI conversations are priced per resolution and volume is high. At low volume, or with fixed flows, SaaS is often cheaper. The deciding factors are your conversation volume, how many systems the bot must connect to, and how much control you need."
+    },
+    {
+      "q": "Do WhatsApp chatbots have extra fees?",
+      "a": "Yes. WhatsApp's business platform charges per message or conversation category, and some providers add a markup. Plans may also limit agent seats or chatbot sessions. Ask every vendor for an all-in monthly figure at your expected volume."
+    },
+    {
+      "q": "Does the price include ongoing management?",
+      "a": "Not always. Many quotes cover the build only. Updating content, reviewing conversations and fixing gaps after launch is a separate line, so ask what is included and what is billed monthly."
+    },
+    {
+      "q": "How soon can I see a Clara AI chatbot demo, and in which languages?",
+      "a": "Clara AI delivers a first demo within 7 days of receiving your material. Clara AI's chatbots and calling agents work in English and Hindi."
+    }
+  ],
+  "sources": [
+    "https://codingclave.com/blog/ai-chatbot-development-cost-india-2026",
+    "https://www.appwizards.in/blog/ai-chatbot-development-cost-india",
+    "https://www.braincuber.com/blog/ai-chatbot-cost-2026-build-vs-buy"
+  ]
+}
