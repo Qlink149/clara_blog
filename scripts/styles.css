@@ -164,6 +164,15 @@ blockquote p:last-child{margin-bottom:0;}
 .cta-box h2{color:#fff;margin:0 0 12px;font-size:32px;}
 .cta-box p{font-family:var(--display);font-weight:300;font-size:18px;line-height:1.55;color:rgba(255,255,255,0.7);margin:0 0 26px;max-width:560px;}
 .cta-box .btns{display:flex;flex-wrap:wrap;gap:12px;}
+/* Mid-post demo box, added by the template after the second section. */
+.cta-mid{
+  display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;
+  margin:40px 0 8px;padding:22px 26px;border-radius:22px;color:#fff;
+  background:linear-gradient(135deg,rgba(139,92,246,0.32),rgba(12,7,26,0.2) 55%),var(--ink);border:1px solid rgba(255,255,255,0.1);
+}
+article .cta-mid p.cta-mid-text{margin:0;font-family:var(--display);font-weight:300;font-size:18px;line-height:1.45;color:rgba(255,255,255,0.72);}
+.cta-mid-text strong{font-weight:500;color:#fff;}
+article .cta-mid a.pill,article .cta-mid a.pill:hover{color:#0A0618;text-decoration:none;}
 
 /* ---------- post cards ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;}
@@ -212,7 +221,9 @@ footer.site a:hover{color:#fff;}
 @media (max-width:767px){
   body{font-size:16px;}
   header.site .in{padding:14px 16px;}
-  header.site nav.desktop,header.site .cta-desktop{display:none;}
+  header.site nav.desktop{display:none;}
+  header.site .cta-head{margin-left:auto;font-size:13px;padding:10px 14px;}
+  header.site details.menu nav .pill{display:none;}
   header.site details.menu{display:block;}
   header.site .logo img{height:28px;}
   .band .in{padding:30px 16px 0;}
@@ -230,6 +241,9 @@ footer.site a:hover{color:#fff;}
   .cta-box{padding:28px 22px;border-radius:24px;}
   .cta-box h2{font-size:26px;}
   .cta-box .btns .pill{width:100%;}
+  .cta-mid{padding:20px;border-radius:18px;}
+  .cta-mid .pill{width:100%;}
+  article .cta-mid p.cta-mid-text{font-size:16.5px;}
   .listing{padding:0 16px 64px;}
   .more .in{padding:52px 16px 56px;}
   .more h2{font-size:27px;}

@@ -87,7 +87,7 @@ const siteHeader = () => `<header class="site">
     <nav class="desktop" aria-label="Main">
       ${navLinks()}
     </nav>
-    <a class="pill cta-desktop" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a strategy call</a>
+    <a class="pill cta-head" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a free demo</a>
     <details class="menu">
       <summary aria-label="Menu">
         <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -95,7 +95,7 @@ const siteHeader = () => `<header class="site">
       </summary>
       <nav aria-label="Main">
       ${navLinks()}
-      <a class="pill" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a strategy call</a>
+      <a class="pill" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a free demo</a>
       </nav>
     </details>
   </div>
@@ -127,13 +127,24 @@ function renderPost(p) {
   const url = postUrl(m.slug);
   const role = config.authors[m.author]?.role;
   const ogImage = `${url}og.jpg`;
-  const body = p.body
+  const bodyRaw = p.body
     .replace(/(<img\b[^>]*\ssrc=")images\//gi, `$1${postPath(m.slug)}images/`)
     .replace(/<table\b[\s\S]*?<\/table>/gi, (t) => `<div class="table-wrap">${t}</div>`)
     .replace(/href="https:\/\/claraai\.tech(?=[\/"#])/gi, `href="${SITE}`)
     .replace(/<a\b([^>]*href="https:\/\/(?!(?:www\.)?claraai\.tech)[^"]*"[^>]*)>/gi, (tag, inner) =>
       /\srel=/.test(inner) ? tag : `<a${inner.replace(/\starget="[^"]*"/, '')} target="_blank" rel="noopener">`);
   const cta = m.cta || config.defaultCta;
+  // Mid-post call to action: goes in before the third h2 of the body (so after the second section).
+  // Posts with fewer than three h2s get it before their last h2 instead.
+  const midCta = `<aside class="cta-mid" aria-label="Book a free demo">
+      <p class="cta-mid-text"><strong>See it working on your data.</strong> First demo within 7 days.</p>
+      <a class="pill" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a free demo</a>
+    </aside>
+
+`;
+  const h2At = [...bodyRaw.matchAll(/<h2\b/gi)].map((x) => x.index);
+  const midAt = h2At.length >= 3 ? h2At[2] : h2At.length >= 2 ? h2At[h2At.length - 1] : -1;
+  const body = midAt >= 0 ? bodyRaw.slice(0, midAt) + midCta + bodyRaw.slice(midAt) : bodyRaw;
   const others = posts.filter((x) => x !== p).slice(0, 3);
 
   const schema = [
@@ -215,7 +226,7 @@ ${m.sources.map((s) => `        <li><a href="${e(s)}" target="_blank" rel="noope
       <h2>${e(cta.heading)}</h2>
       <p>${e(cta.text)}</p>
       <div class="btns">
-        <a class="pill lg" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a strategy call</a>
+        <a class="pill lg" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a free demo</a>
         <a class="pill lg ghost" href="mailto:${config.contactEmail}">${e(config.contactEmail)}</a>
       </div>
     </aside>

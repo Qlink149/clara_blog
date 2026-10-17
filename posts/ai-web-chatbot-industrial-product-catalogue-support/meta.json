@@ -16,7 +16,7 @@
   "faqs": [
     {
       "q": "How much does an AI web chatbot for a product catalogue cost?",
-      "a": "Cost depends on the size of the catalogue, the systems the chatbot connects to and the channels you want. Clara AI prices the work after the diagnosis, once the scope is clear. A strategy call is the quickest way to get a first view."
+      "a": "Cost depends on the size of the catalogue, the systems the chatbot connects to and the channels you want. Clara AI prices the work after the diagnosis, once the scope is clear. A free demo is the quickest way to get a first view."
     },
     {
       "q": "How long until it is live on our website?",
@@ -40,6 +40,6 @@
   ],
   "cta": {
     "heading": "Want to see your own catalogue in a conversation?",
-    "text": "Your buyers are already asking technical questions after hours. To see what an AI web chatbot for industrial product catalogue support would look like on your website, book a strategy call with Clara AI."
+    "text": "Your buyers are already asking technical questions after hours. To see what an AI web chatbot for industrial product catalogue support would look like on your website, book a free demo with Clara AI."
   }
 }
