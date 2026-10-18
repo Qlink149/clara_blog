@@ -1,0 +1,43 @@
+{
+  "title": "AI Email Support Automation for E-commerce Brands",
+  "slug": "ai-email-support-automation-for-ecommerce",
+  "description": "AI email support automation for ecommerce sorts incoming emails, drafts replies from your policies and hands tricky cases to your team. See how it works.",
+  "date": "2026-10-19",
+  "author": "Yogansh Banthia",
+  "category": "Custom AI Agents",
+  "keyword": "ai email support automation for ecommerce",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "AI email support automation for ecommerce: a laptop with a sorted inbox and a reply draft",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions e-commerce teams ask about AI email support",
+  "faqs": [
+    {
+      "q": "How much does AI email support automation cost?",
+      "a": "Cost depends on the number of inboxes, the email types, the systems the agent connects to and the checks you need. Clara AI sets the scope after a diagnosis and then shares a clear proposal."
+    },
+    {
+      "q": "How long does it take to go live?",
+      "a": "Go-live depends on the email types, the number of connections to your order system and helpdesk, and how quickly your team approves the rules. Clara AI confirms a timeline after diagnosis, based on your actual material."
+    },
+    {
+      "q": "Which systems can the agent connect to?",
+      "a": "Typically your helpdesk or shared inbox, your store platform and your order system, so it can read orders and your team sees drafts where they already work. The exact list is confirmed during diagnosis."
+    },
+    {
+      "q": "Will it send replies without a person checking?",
+      "a": "That is your choice. Many teams start with every draft reviewed, then let low-risk types go out automatically once the drafts have proved reliable. Sensitive cases always go to a person."
+    },
+    {
+      "q": "Can it handle marketplace messages?",
+      "a": "It depends on how each marketplace lets you receive and answer messages, for example through email or a connected helpdesk. We check this for each marketplace you use during diagnosis."
+    }
+  ],
+  "sources": [],
+  "cta": {
+    "heading": "Want to see your inbox sorted and drafted?",
+    "text": "Book a free demo with Clara AI."
+  }
+}
