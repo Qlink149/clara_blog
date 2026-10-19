@@ -1,0 +1,39 @@
+{
+  "title": "What Is a Real Estate Sales Dashboard? A Gulf Developer Guide",
+  "slug": "real-estate-sales-dashboard",
+  "description": "A real estate sales dashboard shows leads, response speed, site visits and bookings by project and source in one live view. A guide for Gulf developers.",
+  "date": "2026-10-20",
+  "author": "Yogansh Banthia",
+  "category": "Operations Intelligence · Real Estate",
+  "keyword": "real estate sales dashboard",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "Real estate sales dashboard: a monitor showing charts, a lead funnel and project tiles",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions developers ask about sales dashboards",
+  "faqs": [
+    {
+      "q": "How much does a real estate sales dashboard cost?",
+      "a": "Cost depends on the number of data sources, projects and measures you want. Clara AI sets the scope after a diagnosis and then shares a clear proposal."
+    },
+    {
+      "q": "How long does it take to go live?",
+      "a": "Go-live depends on the number of sources, the quality of the data and how quickly your team agrees the measures and rules. Clara AI confirms a timeline after diagnosis, based on your actual material."
+    },
+    {
+      "q": "Which systems can it connect to?",
+      "a": "Typically your CRM, ad accounts, call logs and the lead feeds from your property portals. The exact list is confirmed during diagnosis."
+    },
+    {
+      "q": "Do we need to replace our CRM?",
+      "a": "No. The dashboard reads from your CRM and other sources. It adds a combined view and does not replace the system your team uses."
+    }
+  ],
+  "sources": [],
+  "cta": {
+    "heading": "Want to see every project and source on one screen?",
+    "text": "Book a free demo with Clara AI."
+  }
+}
