@@ -42,7 +42,7 @@ const jsonLd = (obj) => `<script type="application/ld+json">${JSON.stringify(obj
 function head({ title, description, canonical, image, imageAlt, type, extra = '' }) {
   const ga = config.gaId
     ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${config.gaId}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${config.gaId}');</script>`
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${config.gaId}');document.addEventListener('click',function(ev){var a=ev.target&&ev.target.closest&&ev.target.closest('a,button');if(!a)return;var h=a.getAttribute('href')||'';var t=(a.innerText||a.textContent||'').trim().replace(/\\s+/g,' ').slice(0,100);if(/wa\\.me|whatsapp\\.com/i.test(h)||/book a free demo|interested/i.test(t)){if(typeof gtag==='function')gtag('event','demo_click',{button_text:t,page_location:location.href,link_url:h,transport_type:'beacon'});}},true);</script>`
     : '';
   return `<!doctype html>
 <html lang="en">
