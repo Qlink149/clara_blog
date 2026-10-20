@@ -12,3 +12,4 @@ The bot changes only the status and slug columns of the row it publishes.
 | done | ai chatbot for hospital appointment booking | Problem-led, Saudi/UAE, chatbot (WhatsApp + web); Apex Hospitals named, no numbers; Arabic/English/Hindi | ai-chatbot-for-hospital-appointment-booking |
 | done | ai chatbot cost india | Comparison / buyer's cost guide, India (also Gulf), chatbots (web + WhatsApp); rule-based vs SaaS vs custom table; public ranges only, cited (Codingclave, AppWizards, Braincuber); no Clara prices; KISNA qualitative only; 15 Oct | ai-chatbot-cost-india |
 | done | ai email support automation for ecommerce | Problem-led, USA/Canada, custom AI agents (email support); Ergode named, no numbers | ai-email-support-automation-for-ecommerce |
+| done | real estate sales dashboard | Definition, UAE/Saudi, dashboard service; Arihant Spaces (CRM + ads dashboard, SLA rules) + Rustomjee one line, no numbers; Arabic/English/Hindi | real-estate-sales-dashboard |
