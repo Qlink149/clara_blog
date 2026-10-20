@@ -1,0 +1,45 @@
+{
+  "title": "IVR vs AI Voice Agent: What Changes for Your Call Centre",
+  "slug": "ivr-vs-ai-voice-agent",
+  "description": "IVR vs AI voice agent: what changes for callers and your call centre, where an IVR is still enough, the risks, and how to move across safely, step by step.",
+  "date": "2026-10-21",
+  "author": "Yogansh Banthia",
+  "category": "AI Calling Agents",
+  "keyword": "ivr vs ai voice agent",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "IVR vs AI voice agent: a headset with voice waves beside an old keypad menu",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions call-centre teams ask about AI voice agents",
+  "faqs": [
+    {
+      "q": "How much does an AI voice agent cost compared with an IVR?",
+      "a": "Cost depends on call volume, the call types, the languages and the systems the agent connects to. Clara AI sets the scope after a diagnosis and then shares a clear proposal."
+    },
+    {
+      "q": "How long does it take to go live?",
+      "a": "Go-live depends on the call types, the number of connections to your phone system and CRM, and how quickly your team approves the handover rules. Clara AI confirms a timeline after diagnosis, based on your actual material."
+    },
+    {
+      "q": "Do we have to replace our phone system?",
+      "a": "Usually not. The agent connects to your existing telephony, and the IVR can stay in place while you move call types across one at a time. The exact set-up is confirmed during diagnosis."
+    },
+    {
+      "q": "Will callers know they are speaking to an AI?",
+      "a": "Yes. The agent says at the start that it is an automated assistant, and callers can ask for a person at any time."
+    },
+    {
+      "q": "Which systems can it connect to?",
+      "a": "Typically your CRM, calendar, helpdesk and phone system, so bookings and call summaries appear where your team already works. The exact list is confirmed during diagnosis."
+    }
+  ],
+  "sources": [
+    "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+  ],
+  "cta": {
+    "heading": "Want to hear your own calls handled by a voice agent?",
+    "text": "Book a free demo with Clara AI."
+  }
+}
