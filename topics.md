@@ -14,3 +14,4 @@ The bot changes only the status and slug columns of the row it publishes.
 | done | ai email support automation for ecommerce | Problem-led, USA/Canada, custom AI agents (email support); Ergode named, no numbers | ai-email-support-automation-for-ecommerce |
 | done | real estate sales dashboard | Definition, UAE/Saudi, dashboard service; Arihant Spaces (CRM + ads dashboard, SLA rules) + Rustomjee one line, no numbers; Arabic/English/Hindi | real-estate-sales-dashboard |
 | done | ivr vs ai voice agent | Comparison, Europe (UK/DE/NL/ES/IT), calling agents; Vijay Sales + IDBI Bank + Aditya Birla Insurance Brokers named, no numbers; English/Hindi; EU AI Act transparency line | ivr-vs-ai-voice-agent |
+| done | ai chatbot development company | Problem-led checklist, USA/Canada, chatbots; Tempsens + Apex Hospitals named, no numbers; English/Hindi | how-to-choose-an-ai-chatbot-development-company |

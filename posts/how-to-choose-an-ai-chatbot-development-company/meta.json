@@ -1,0 +1,43 @@
+{
+  "title": "How to Choose an AI Chatbot Development Company: A Checklist",
+  "slug": "how-to-choose-an-ai-chatbot-development-company",
+  "description": "Choosing an AI chatbot development company? Use this ten-point checklist and vendor question list to test demos, handover, data and support before you sign.",
+  "date": "2026-10-22",
+  "author": "Yogansh Banthia",
+  "category": "AI Chatbots",
+  "keyword": "ai chatbot development company",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "How to choose an AI chatbot development company: a laptop chat beside a checklist",
+    "width": 1600,
+    "height": 900
+  },
+  "faq_heading": "Questions buyers ask before hiring a chatbot company",
+  "faqs": [
+    {
+      "q": "How much does an AI chatbot development company charge?",
+      "a": "Cost depends on the channels, the size of your content, the systems the bot connects to and the support you want after launch. Clara AI sets the scope after a diagnosis and then shares a clear proposal."
+    },
+    {
+      "q": "How long does it take to build a chatbot?",
+      "a": "Go-live depends on the channels, the number of integrations and how quickly your team approves the answers and handover rules. Clara AI confirms a timeline after diagnosis, based on your actual material."
+    },
+    {
+      "q": "Do we need a technical team to run it?",
+      "a": "No. Clara AI monitors, updates and improves the chatbot after launch, so your own team only reviews handovers and approves changes to the answers."
+    },
+    {
+      "q": "Should we build a chatbot in-house or hire a company?",
+      "a": "Building in-house suits businesses with developers who can maintain it for years. For a business with no tech team, a company that also manages the bot after launch is usually the safer route."
+    },
+    {
+      "q": "Will customers know it is a chatbot?",
+      "a": "Yes. We design the chatbot to say it is an automated assistant, and customers can ask for a person at any time."
+    }
+  ],
+  "sources": [],
+  "cta": {
+    "heading": "Want to see a chatbot answer from your own documents?",
+    "text": "Book a free demo with Clara AI."
+  }
+}
