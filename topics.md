@@ -16,3 +16,4 @@ The bot changes only the status and slug columns of the row it publishes.
 | done | ivr vs ai voice agent | Comparison, Europe (UK/DE/NL/ES/IT), calling agents; Vijay Sales + IDBI Bank + Aditya Birla Insurance Brokers named, no numbers; English/Hindi; EU AI Act transparency line | ivr-vs-ai-voice-agent |
 | done | ai chatbot development company | Problem-led checklist, USA/Canada, chatbots; Tempsens + Apex Hospitals named, no numbers; English/Hindi | how-to-choose-an-ai-chatbot-development-company |
 | done | ai calling agent dubai real estate | Use case, UAE/Dubai, calling agents; Rustomjee + Hiranandani + Arihant Spaces named, no numbers; English/Hindi/Arabic; UAE consent line | ai-calling-agent-dubai-real-estate |
+| done | what is a custom ai agent | Definition, USA/Canada, custom AI agents; Rustomjee + Apex Hospitals named, no numbers; English/Hindi | what-is-a-custom-ai-agent |
