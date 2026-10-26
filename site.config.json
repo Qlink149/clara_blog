@@ -49,7 +49,8 @@
     "maxImages": 6
   },
   "logoFile": "assets/brand/clara-logo-white.png",
-  "ctaUrl": "https://wa.me/918696979791?text=Hello%2C%0AI%20am%20ready%20to%20implement%20AI%20in%20my%20business!",
+  "ctaUrl": "https://wa.me/919549549339?text={text}",
+  "ctaText": "Hi Clara, I read your blog post and I'd like a free demo [{tag}]",
   "nav": [
     {
       "label": "Why Clara",
