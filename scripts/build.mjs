@@ -35,7 +35,11 @@ fs.copyFileSync(path.join(ROOT, 'assets', 'site', 'favicon.ico'), path.join(OUT,
 fs.copyFileSync(path.join(ROOT, 'assets', 'site', 'favicon.ico'), path.join(DIST, 'favicon.ico'));
 const A = `${BASE}/assets/site`;
 // Blog CTAs go to the sales WhatsApp line with a [WEB-BLOG] source tag, same pattern as the main site.
-const WA = `https://wa.me/919549549339?text=${encodeURIComponent('Hello,\nI am ready to implement AI in my business! [WEB-BLOG]')}`;
+// WhatsApp CTA goes to Clara (the WhatsApp Agent). Each post carries its own source tag [WEB-BLOG-<slug>];
+// the index and other pages use [WEB-BLOG]. The template lives in site.config.json (ctaUrl, {tag} placeholder).
+let ctaTag = 'WEB-BLOG';
+const waUrl = (tag) => (config.ctaUrl || 'https://wa.me/919549549339?text={text}').replace('{text}', encodeURIComponent((config.ctaText || "Hi Clara, I read your blog post and I'd like a free demo [{tag}]").replace('{tag}', tag)));
+const WA_ = () => waUrl(ctaTag);
 const NAV = [
   ['Solutions', `${SITE}/#solutions`],
   ['Case studies', `${SITE}/#case-studies`],
@@ -63,7 +67,7 @@ const SVC = [
   ['Custom AI Agents', `${SITE}/custom-ai-agents`],
 ];
 const arrow = '<svg class="arr" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-const waBtn = (label = 'Book a free demo', cls = 'btn-primary') => `<a class="btn ${cls}" href="${WA}" target="_blank" rel="noopener" data-hide-float>${label}${arrow}</a>`;
+const waBtn = (label = 'Book a free demo', cls = 'btn-primary') => `<a class="btn ${cls}" href="${WA_()}" target="_blank" rel="noopener" data-hide-float>${label}${arrow}</a>`;
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const niceDate = (iso) => {
@@ -127,7 +131,7 @@ const siteHeader = () => `<header class="pill">
       ${NAV.map(([t, h]) => `<a href="${h}"${h === `${SITE}/blog/` ? ' aria-current="page"' : ''}>${e(t)}</a>`).join('\n      ')}
     </nav>
     <div class="pill-end">
-      <a class="btn btn-primary btn-sm head-cta" href="${WA}" target="_blank" rel="noopener">Book a free demo</a>
+      <a class="btn btn-primary btn-sm head-cta" href="${WA_()}" target="_blank" rel="noopener">Book a free demo</a>
       <details class="menu">
         <summary aria-label="Open menu">
           <svg class="bars" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -140,7 +144,7 @@ const siteHeader = () => `<header class="pill">
           <div class="svc-tiles">
             ${SVC.map(([t, h]) => `<a href="${h}">${e(t)}</a>`).join('\n            ')}
           </div>
-          <a class="btn btn-light btn-block" href="${WA}" target="_blank" rel="noopener">Book a free demo${arrow}</a>
+          <a class="btn btn-light btn-block" href="${WA_()}" target="_blank" rel="noopener">Book a free demo${arrow}</a>
         </div>
       </details>
     </div>
@@ -163,7 +167,7 @@ const footer = () => `<footer class="site sec-dark grain">
     <p class="copy">&copy; ${new Date().getFullYear()} Clara AI. SNB Future Drive Pvt Ltd.</p>
   </div>
 </footer>
-<a class="wa-float" href="${WA}" target="_blank" rel="noopener" aria-label="Chat with Clara AI on WhatsApp" title="Chat with us on WhatsApp"><svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.99L4 29l8.27-2.15a12.1 12.1 0 0 0 3.77.6C22.68 27.45 28 22.08 28 15.47 28 8.86 22.68 3 16.04 3zm0 22.4c-1.2 0-2.38-.2-3.5-.6l-.25-.09-4.9 1.28 1.3-4.75-.16-.25A9.86 9.86 0 0 1 6.1 14.97c0-5.47 4.46-9.92 9.94-9.92 5.47 0 9.92 4.6 9.92 10.42 0 5.47-4.45 9.93-9.92 9.93zm5.45-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg></a>
+<a class="wa-float" href="${WA_()}" target="_blank" rel="noopener" aria-label="Chat with Clara AI on WhatsApp" title="Chat with us on WhatsApp"><svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.99L4 29l8.27-2.15a12.1 12.1 0 0 0 3.77.6C22.68 27.45 28 22.08 28 15.47 28 8.86 22.68 3 16.04 3zm0 22.4c-1.2 0-2.38-.2-3.5-.6l-.25-.09-4.9 1.28 1.3-4.75-.16-.25A9.86 9.86 0 0 1 6.1 14.97c0-5.47 4.46-9.92 9.94-9.92 5.47 0 9.92 4.6 9.92 10.42 0 5.47-4.45 9.93-9.92 9.93zm5.45-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg></a>
 <script>(function(){var f=document.querySelector('.wa-float');if(!f||typeof IntersectionObserver==='undefined')return;var seen=new Set();var io=new IntersectionObserver(function(es){es.forEach(function(x){x.isIntersecting?seen.add(x.target):seen.delete(x.target)});f.classList.toggle('hide',seen.size>0)},{rootMargin:'-55% 0px 0px 0px'});document.querySelectorAll('[data-hide-float],.cta-mid,.cta-box').forEach(function(el){io.observe(el)});})();</script>`;
 
 const card = (p, tag = 'h2', featured = false) => `<article class="card${featured ? ' featured' : ''}">
@@ -178,6 +182,7 @@ const card = (p, tag = 'h2', featured = false) => `<article class="card${feature
 
 function renderPost(p) {
   const m = p.meta;
+  ctaTag = `WEB-BLOG-${m.slug}`;
   const url = postUrl(m.slug);
   const role = config.authors[m.author]?.role;
   const ogImage = `${url}og.jpg`;
@@ -305,6 +310,7 @@ ${footer()}
 }
 
 function renderIndex() {
+  ctaTag = 'WEB-BLOG';
   const url = `${SITE}${BASE}/`;
   const first = posts[0];
   return `${head({
