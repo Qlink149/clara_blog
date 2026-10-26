@@ -41,17 +41,26 @@ const NAV = [
   ['Case studies', `${SITE}/#case-studies`],
   ['LinkedIn Agent', `${SITE}/ai-linkedin-outreach-agent`],
   ['SEO Agent', `${SITE}/ai-seo-agent`],
-  ['Blog', `${BASE}/`],
+  ['Blog', `${SITE}/blog/`],
   ['Contact', `${SITE}/#contact`],
 ];
 const FOOT = [
   ['Clara AI home', `${SITE}/`],
   ['AI Virtual Employees', `${SITE}/#ai-virtual-employees`],
+  ['AI LinkedIn Outreach Agent', `${SITE}/ai-linkedin-outreach-agent`],
+  ['AI SEO Agent', `${SITE}/ai-seo-agent`],
   ['AI Calling Agents', `${SITE}/ai-calling-agents`],
   ['AI Chatbots', `${SITE}/ai-chatbots`],
   ['AI Dashboards', `${SITE}/ai-dashboards`],
   ['Custom AI Agents', `${SITE}/custom-ai-agents`],
-  ['Blog', `${BASE}/`],
+  ['Blog', `${SITE}/blog/`],
+];
+// Same service tiles as the main site's phone menu.
+const SVC = [
+  ['AI Chatbots', `${SITE}/ai-chatbots`],
+  ['AI Calling Agents', `${SITE}/ai-calling-agents`],
+  ['AI Dashboards', `${SITE}/ai-dashboards`],
+  ['Custom AI Agents', `${SITE}/custom-ai-agents`],
 ];
 const arrow = '<svg class="arr" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const waBtn = (label = 'Book a free demo', cls = 'btn-primary') => `<a class="btn ${cls}" href="${WA}" target="_blank" rel="noopener" data-hide-float>${label}${arrow}</a>`;
@@ -115,7 +124,7 @@ const siteHeader = () => `<header class="pill">
   <div class="pill-bar">
     <a class="logo" href="${SITE}/" aria-label="${e(config.siteName)} home">${wordmark(30)}</a>
     <nav class="pill-links" aria-label="Main">
-      ${NAV.map(([t, h]) => `<a href="${h}"${h === `${BASE}/` ? ' aria-current="page"' : ''}>${e(t)}</a>`).join('\n      ')}
+      ${NAV.map(([t, h]) => `<a href="${h}"${h === `${SITE}/blog/` ? ' aria-current="page"' : ''}>${e(t)}</a>`).join('\n      ')}
     </nav>
     <div class="pill-end">
       <a class="btn btn-primary btn-sm head-cta" href="${WA}" target="_blank" rel="noopener">Book a free demo</a>
@@ -128,6 +137,9 @@ const siteHeader = () => `<header class="pill">
           <nav aria-label="Mobile">
             ${NAV.map(([t, h]) => `<a class="big" href="${h}">${e(t)}${arrow}</a>`).join('\n            ')}
           </nav>
+          <div class="svc-tiles">
+            ${SVC.map(([t, h]) => `<a href="${h}">${e(t)}</a>`).join('\n            ')}
+          </div>
           <a class="btn btn-light btn-block" href="${WA}" target="_blank" rel="noopener">Book a free demo${arrow}</a>
         </div>
       </details>
@@ -140,8 +152,8 @@ const footer = () => `<footer class="site sec-dark grain">
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-copy">
-        <a href="${SITE}/" aria-label="${e(config.siteName)} home" class="foot-logo">${wordmark(36)}</a>
-        <p>An AI implementation team building AI virtual employees, calling agents, chatbots, dashboards and custom agents around your workflow.</p>
+        ${wordmark(40, 'foot-logo')}
+        <p>An AI implementation team building AI virtual employees, calling agents, chatbots, dashboards and custom agents around your workflow. Trusted by 19 clients.</p>
       </div>
       ${waBtn('Book a free demo', 'btn-light')}
     </div>
