@@ -29,6 +29,42 @@ const logoFile = `logo.${crypto.createHash('sha1').update(logoBuf).digest('hex')
 fs.writeFileSync(path.join(OUT, 'assets', logoFile), logoBuf);
 const logoMeta = await sharp(logoBuf).metadata();
 
+// Site design assets shared with the new claraai.tech design (font, star mark, wordmark, gradient).
+fs.cpSync(path.join(ROOT, 'assets', 'site'), path.join(OUT, 'assets', 'site'), { recursive: true });
+fs.copyFileSync(path.join(ROOT, 'assets', 'site', 'favicon.ico'), path.join(OUT, 'favicon.ico'));
+fs.copyFileSync(path.join(ROOT, 'assets', 'site', 'favicon.ico'), path.join(DIST, 'favicon.ico'));
+const A = `${BASE}/assets/site`;
+// Blog CTAs go to the sales WhatsApp line with a [WEB-BLOG] source tag, same pattern as the main site.
+const WA = `https://wa.me/919549549339?text=${encodeURIComponent('Hello,\nI am ready to implement AI in my business! [WEB-BLOG]')}`;
+const NAV = [
+  ['Solutions', `${SITE}/#solutions`],
+  ['Case studies', `${SITE}/#case-studies`],
+  ['LinkedIn Agent', `${SITE}/ai-linkedin-outreach-agent`],
+  ['SEO Agent', `${SITE}/ai-seo-agent`],
+  ['Blog', `${SITE}/blog/`],
+  ['Contact', `${SITE}/#contact`],
+];
+const FOOT = [
+  ['Clara AI home', `${SITE}/`],
+  ['AI Virtual Employees', `${SITE}/#ai-virtual-employees`],
+  ['AI LinkedIn Outreach Agent', `${SITE}/ai-linkedin-outreach-agent`],
+  ['AI SEO Agent', `${SITE}/ai-seo-agent`],
+  ['AI Calling Agents', `${SITE}/ai-calling-agents`],
+  ['AI Chatbots', `${SITE}/ai-chatbots`],
+  ['AI Dashboards', `${SITE}/ai-dashboards`],
+  ['Custom AI Agents', `${SITE}/custom-ai-agents`],
+  ['Blog', `${SITE}/blog/`],
+];
+// Same service tiles as the main site's phone menu.
+const SVC = [
+  ['AI Chatbots', `${SITE}/ai-chatbots`],
+  ['AI Calling Agents', `${SITE}/ai-calling-agents`],
+  ['AI Dashboards', `${SITE}/ai-dashboards`],
+  ['Custom AI Agents', `${SITE}/custom-ai-agents`],
+];
+const arrow = '<svg class="arr" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const waBtn = (label = 'Book a free demo', cls = 'btn-primary') => `<a class="btn ${cls}" href="${WA}" target="_blank" rel="noopener" data-hide-float>${label}${arrow}</a>`;
+
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const niceDate = (iso) => {
   const [y, m, d] = iso.split('-').map(Number);
@@ -49,7 +85,7 @@ function head({ title, description, canonical, image, imageAlt, type, extra = ''
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#070312">
+<meta name="theme-color" content="#0C0828">
 <title>${e(title)}</title>
 <meta name="description" content="${e(description)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -68,57 +104,75 @@ ${image ? `<meta property="og:image" content="${image}">
 <meta name="twitter:title" content="${e(title)}">
 <meta name="twitter:description" content="${e(description)}">
 <link rel="alternate" type="application/rss+xml" title="${e(config.siteName)} Blog" href="${SITE}${BASE}/feed.xml">
+<link rel="icon" href="${BASE}/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="${BASE}/assets/site/favicon-32x32.png">
+<link rel="preload" href="${BASE}/assets/site/OverusedGrotesk-VF.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Overused Grotesk";src:url(${BASE}/assets/site/OverusedGrotesk-VF.woff2) format("woff2");font-weight:300 900;font-style:normal;font-display:swap}:root{--star:url(${BASE}/assets/site/star.svg)}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="${BASE}/assets/${cssFile}">
 ${extra}
 ${ga}
 </head>`;
 }
 
-const logo = (h) => `<img src="${BASE}/assets/${logoFile}" alt="${e(config.siteName)}" width="${Math.round((logoMeta.width * h) / logoMeta.height)}" height="${h}">`;
-const navLinks = () => config.nav.map((n) => `<a href="${n.href}"${n.href === `${BASE}/` ? ' aria-current="page"' : ''}>${e(n.label)}</a>`).join('\n      ');
+const wordmark = (h, cls = '') => `<img src="${A}/wordmark-white.svg" alt="${e(config.siteName)}" width="${Math.round(h * 125 / 40)}" height="${h}"${cls ? ` class="${cls}"` : ''}>`;
 
-// Same header as the homepage: logo, five links, white button. The phone menu needs no JavaScript.
-const siteHeader = () => `<header class="site">
-  <div class="in">
-    <a class="logo" href="${SITE}/" aria-label="${e(config.siteName)} home">${logo(32)}</a>
-    <nav class="desktop" aria-label="Main">
-      ${navLinks()}
+// Pill header, same links as the new claraai.tech. The phone menu is a <details>, so it needs no JavaScript.
+const siteHeader = () => `<header class="pill">
+  <div class="pill-bar">
+    <a class="logo" href="${SITE}/" aria-label="${e(config.siteName)} home">${wordmark(30)}</a>
+    <nav class="pill-links" aria-label="Main">
+      ${NAV.map(([t, h]) => `<a href="${h}"${h === `${SITE}/blog/` ? ' aria-current="page"' : ''}>${e(t)}</a>`).join('\n      ')}
     </nav>
-    <a class="pill cta-head" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a free demo</a>
-    <details class="menu">
-      <summary aria-label="Menu">
-        <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </summary>
-      <nav aria-label="Main">
-      ${navLinks()}
-      <a class="pill" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a free demo</a>
-      </nav>
-    </details>
+    <div class="pill-end">
+      <a class="btn btn-primary btn-sm head-cta" href="${WA}" target="_blank" rel="noopener">Book a free demo</a>
+      <details class="menu">
+        <summary aria-label="Open menu">
+          <svg class="bars" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="x" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </summary>
+        <div class="menu-card">
+          <nav aria-label="Mobile">
+            ${NAV.map(([t, h]) => `<a class="big" href="${h}">${e(t)}${arrow}</a>`).join('\n            ')}
+          </nav>
+          <div class="svc-tiles">
+            ${SVC.map(([t, h]) => `<a href="${h}">${e(t)}</a>`).join('\n            ')}
+          </div>
+          <a class="btn btn-light btn-block" href="${WA}" target="_blank" rel="noopener">Book a free demo${arrow}</a>
+        </div>
+      </details>
+    </div>
   </div>
 </header>`;
 
-const footer = () => `<footer class="site">
-  <div class="in">
-    <a href="${SITE}/" aria-label="${e(config.siteName)} home">${logo(24)}</a>
-    <div class="tag">
-      <span>${e(config.footerTaglines[0])}</span>
-      <span class="extra">&bull;</span>
-      <span class="extra">${e(config.footerTaglines[1])}</span>
+const footer = () => `<footer class="site sec-dark grain">
+  <div class="bg" style="background-image:url(${A}/grad-4-sm.webp)"></div>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-copy">
+        ${wordmark(40, 'foot-logo')}
+        <p>An AI implementation team building AI virtual employees, calling agents, chatbots, dashboards and custom agents around your workflow. Trusted by 19 clients.</p>
+      </div>
+      ${waBtn('Book a free demo', 'btn-light')}
     </div>
+    <nav class="foot-links" aria-label="Services">
+      ${FOOT.map(([t, h]) => `<a href="${h}">${e(t)}</a>`).join('\n      ')}
+    </nav>
+    <p class="copy">&copy; ${new Date().getFullYear()} Clara AI. SNB Future Drive Pvt Ltd.</p>
   </div>
-</footer>`;
+</footer>
+<a class="wa-float" href="${WA}" target="_blank" rel="noopener" aria-label="Chat with Clara AI on WhatsApp" title="Chat with us on WhatsApp"><svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.99L4 29l8.27-2.15a12.1 12.1 0 0 0 3.77.6C22.68 27.45 28 22.08 28 15.47 28 8.86 22.68 3 16.04 3zm0 22.4c-1.2 0-2.38-.2-3.5-.6l-.25-.09-4.9 1.28 1.3-4.75-.16-.25A9.86 9.86 0 0 1 6.1 14.97c0-5.47 4.46-9.92 9.94-9.92 5.47 0 9.92 4.6 9.92 10.42 0 5.47-4.45 9.93-9.92 9.93zm5.45-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg></a>
+<script>(function(){var f=document.querySelector('.wa-float');if(!f||typeof IntersectionObserver==='undefined')return;var seen=new Set();var io=new IntersectionObserver(function(es){es.forEach(function(x){x.isIntersecting?seen.add(x.target):seen.delete(x.target)});f.classList.toggle('hide',seen.size>0)},{rootMargin:'-55% 0px 0px 0px'});document.querySelectorAll('[data-hide-float],.cta-mid,.cta-box').forEach(function(el){io.observe(el)});})();</script>`;
 
 const card = (p, tag = 'h2', featured = false) => `<article class="card${featured ? ' featured' : ''}">
-  <a class="img" href="${postPath(p.meta.slug)}" tabindex="-1" aria-hidden="true"><img src="${postPath(p.meta.slug)}images/${p.meta.hero.file}" alt="" width="${p.heroSize.width}" height="${p.heroSize.height}" loading="lazy"></a>
+  <a class="img" href="${postPath(p.meta.slug)}" tabindex="-1" aria-hidden="true"><img src="${postPath(p.meta.slug)}images/${p.meta.hero.file}" alt="${e(p.meta.title)}" width="${p.heroSize.width}" height="${p.heroSize.height}" loading="${featured ? 'eager' : 'lazy'}"${featured ? ' fetchpriority="high"' : ''}></a>
   <div class="in">
     <p class="cat">${e(p.meta.category)}</p>
     <${tag}><a href="${postPath(p.meta.slug)}">${e(p.meta.title)}</a></${tag}>
-    <p>${e(p.meta.description)}</p>
-    <time datetime="${p.meta.date}">${niceDate(p.meta.date)}</time>${featured ? `\n    <a class="pill read" href="${postPath(p.meta.slug)}">Read the guide</a>` : ''}
+    <p class="ex">${e(p.meta.description)}</p>
+    <time datetime="${p.meta.date}">${niceDate(p.meta.date)}</time>
   </div>
 </article>`;
 
@@ -138,7 +192,7 @@ function renderPost(p) {
   // Posts with fewer than three h2s get it before their last h2 instead.
   const midCta = `<aside class="cta-mid" aria-label="Book a free demo">
       <p class="cta-mid-text"><strong>See it working on your data.</strong> First demo within 7 days.</p>
-      <a class="pill" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a free demo</a>
+      ${waBtn()}
     </aside>
 
 `;
@@ -195,9 +249,10 @@ ${schema.map(jsonLd).join('\n')}`,
 ${siteHeader()}
 <main>
 <article>
-  <div class="band post">
+  <div class="band post sec-dark grain">
+    <div class="bg" style="background-image:url(${A}/grad-4.webp)"></div>
     <div class="in">
-      <p class="crumbs"><a href="${SITE}/">Home</a> &nbsp;/&nbsp; <a href="${BASE}/">Blog</a></p>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="${SITE}/">Home</a><span aria-hidden="true">/</span><a href="${BASE}/">Blog</a></nav>
       <p class="eyebrow">${e(m.category)}</p>
       <h1>${e(m.title)}</h1>
       <p class="byline">By <strong>${e(m.author)}</strong>${role ? `, ${e(role)}` : ''} &nbsp;&middot;&nbsp; <time datetime="${m.date}">${niceDate(m.date)}</time>${m.updated && m.updated !== m.date ? ` &nbsp;&middot;&nbsp; Updated <time datetime="${m.updated}">${niceDate(m.updated)}</time>` : ''}</p>
@@ -226,16 +281,16 @@ ${m.sources.map((s) => `        <li><a href="${e(s)}" target="_blank" rel="noope
       <h2>${e(cta.heading)}</h2>
       <p>${e(cta.text)}</p>
       <div class="btns">
-        <a class="pill lg" href="${config.ctaUrl}" target="_blank" rel="noopener">Book a free demo</a>
-        <a class="pill lg ghost" href="mailto:${config.contactEmail}">${e(config.contactEmail)}</a>
+        ${waBtn('Book a free demo', 'btn-light')}
+        <a class="btn btn-ghost" href="mailto:${config.contactEmail}">${e(config.contactEmail)}</a>
       </div>
     </aside>
   </div>
 </article>
 ${others.length ? `
 <section class="more">
-  <div class="in">
-    <p class="label">Keep reading</p>
+  <div class="wrap">
+    <p class="eyebrow">Keep reading</p>
     <h2>More from the ${e(config.siteName)} blog</h2>
     <div class="cards">
 ${others.map((x) => card(x, 'h3')).join('\n')}
@@ -269,13 +324,14 @@ function renderIndex() {
       blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.meta.title, url: postUrl(p.meta.slug), datePublished: p.meta.date })),
     }),
   })}
-<body class="dark">
+<body>
 ${siteHeader()}
 <main>
-  <div class="band index">
+  <div class="band index sec-dark grain">
+    <div class="bg" style="background-image:url(${A}/grad-4.webp)"></div>
     <div class="in">
       <p class="eyebrow">${e(config.siteName)} Blog</p>
-      <h1>${e(config.blogHeading.plain)} <span class="grad">${e(config.blogHeading.gradient)}</span></h1>
+      <h1>${e(config.blogHeading.plain)} <span class="serif">${e(config.blogHeading.gradient)}</span></h1>
       <p class="lede">${e(config.blogDescription)}</p>
     </div>
   </div>
@@ -352,6 +408,6 @@ fs.writeFileSync(
 // The project's own address only exists to feed claraai.tech/blog, so send stray visitors there.
 const bounce = `<!doctype html><meta charset="utf-8"><title>${e(config.siteName)} Blog</title><link rel="canonical" href="${SITE}${BASE}/"><meta http-equiv="refresh" content="0; url=${BASE}/"><a href="${BASE}/">${e(config.siteName)} Blog</a>`;
 fs.writeFileSync(path.join(DIST, 'index.html'), bounce);
-fs.writeFileSync(path.join(DIST, '404.html'), `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found | ${e(config.siteName)}</title><link rel="stylesheet" href="${BASE}/assets/${cssFile}"><body class="dark"><div class="band index"><div class="in"><h1>Page not found</h1><p class="lede"><a class="pill" href="${BASE}/">Back to the blog</a></p></div></div>`);
+fs.writeFileSync(path.join(DIST, '404.html'), `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found | ${e(config.siteName)}</title><link rel="stylesheet" href="${BASE}/assets/${cssFile}"><body><div class="band index sec-dark grain"><div class="bg" style="background-image:url(${BASE}/assets/site/grad-4.webp)"></div><div class="in"><h1>Page not found</h1><p class="lede"><a class="btn btn-light" href="${BASE}/">Back to the blog</a></p></div></div>`);
 
 console.log(`\nBuilt ${posts.length} post(s) into dist${BASE}/`);
