@@ -61,6 +61,8 @@ const FOOT = [
 ];
 // Same service tiles as the main site's phone menu.
 const SVC = [
+  ['AI LinkedIn Outreach Agent', `${SITE}/ai-linkedin-outreach-agent`],
+  ['AI SEO Agent', `${SITE}/ai-seo-agent`],
   ['AI Chatbots', `${SITE}/ai-chatbots`],
   ['AI Calling Agents', `${SITE}/ai-calling-agents`],
   ['AI Dashboards', `${SITE}/ai-dashboards`],
@@ -342,6 +344,13 @@ ${siteHeader()}
     </div>
   </div>
   <div class="listing">
+    <section class="agents" aria-labelledby="agents-h">
+      <h2 id="agents-h" class="eyebrow">Our AI agents</h2>
+      <div class="agent-cards">
+        <a class="agent-card" href="${SITE}/ai-linkedin-outreach-agent"><strong>AI LinkedIn Outreach Agent${arrow}</strong><span>Finds the right buyers on LinkedIn, sends invites and follow-ups, and reports replies to you on WhatsApp.</span></a>
+        <a class="agent-card" href="${SITE}/ai-seo-agent"><strong>AI SEO Agent${arrow}</strong><span>Picks topics, writes and publishes blog posts every day, and tracks which pages bring you traffic.</span></a>
+      </div>
+    </section>
     <div class="cards">
 ${posts.map((p, i) => card(p, 'h2', i === 0)).join('\n') || '      <p>No posts yet.</p>'}
     </div>
