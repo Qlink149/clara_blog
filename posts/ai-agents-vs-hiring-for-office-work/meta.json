@@ -1,0 +1,23 @@
+{
+  "title": "AI Agents vs Hiring: Who Will Do Your Office Work Next?",
+  "slug": "ai-agents-vs-hiring-for-office-work",
+  "description": "Most office work is browser work plus a WhatsApp report to the boss. Here is why AI agents vs hiring is now a real choice, and where people stay in charge.",
+  "date": "2026-10-27",
+  "author": "Yogansh Banthia",
+  "category": "AI Agents · Future of Work",
+  "keyword": "ai agents vs hiring",
+  "hero": {"file": "hero.webp", "alt": "AI agents vs hiring: a browser agent on a laptop reporting to a phone chat", "width": 1280, "height": 720},
+  "faq_heading": "Questions business owners ask about AI agents vs hiring",
+  "faqs": [
+    {"q": "Can an AI agent really replace a new hire for office work?", "a": "For screen-based, repeatable work such as outreach, research, publishing and reporting, yes. An agent works in a real browser and reports on WhatsApp, the same way a junior employee would. Work that needs relationships, judgment or physical presence should stay with people."},
+    {"q": "How do I give instructions to an AI agent?", "a": "You message it on WhatsApp, in real time, the way you would message a team member. It understands any language in text and accepts voice notes in English for now."},
+    {"q": "Do I stay in control of what the agent sends?", "a": "Yes. You approve messages and strategy, and the agent reports what it did every day. The final call or meeting with a lead is always yours."},
+    {"q": "How fast can Clara AI set up an agent for my business?", "a": "Clara AI delivers a first demo within 7 days of receiving your material, such as your target customers, your offer and your accounts. We then deploy and manage the agent for you."},
+    {"q": "Which agent should I start with?", "a": "If you sell to businesses, start with the LinkedIn Outreach Agent to get conversations with buyers. If you want steady inbound leads from Google, start with the SEO Agent. Many teams use both."}
+  ],
+  "sources": [],
+  "cta": {
+    "heading": "See an agent do the work before you hire",
+    "text": "Tell us one job you were about to hire for. We will show you an agent doing it in a browser and reporting to you on WhatsApp. Book a free demo with Clara AI."
+  }
+}
