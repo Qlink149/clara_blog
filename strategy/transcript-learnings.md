@@ -3,7 +3,7 @@
 ## 0. Sources, and what's missing
 | # | Source | Date | Where | Used? |
 |---|---|---|---|---|
-| S1 | Surfer SEO video transcript (how SEO/GEO works) | 26 Oct 2026 | Pasted into Blog Bot's main chat | **NOT READABLE.** It isn't saved anywhere on the box (searched /workspace, /home/box, the stores and agent-tools), and this executor can't read the main chat. **Save it to `strategy/sources/surfer-seo-geo.txt` and section A gets rewritten from it.** |
+| S1 | SEO/GEO video transcript (how SEO and AI search work) | 26 Oct 2026 | Pasted into Blog Bot's main chat | **READABLE (corrected 27 Oct 2026).** Saved at `/workspace/agent-org-plan/skills/sources/blog-bot_seo-geo.txt` (first 20,000 characters). Turned into the skill `seo-geo-content-playbook`, which every post and service page must follow. Landing-page lessons are in the skill `high-converting-landing-page`. |
 | S2 | Yogansh's spoken notes on the landing pages (dark theme, plain language, proof and screenshots on top) | 26 Oct 2026 | Main chat, saved in memory | Yes (section B) |
 | S3 | Our own SEO/GEO research (competitors, SERPs, site audit) | 13 Oct 2026 | `research/2026-10-13-seo-geo-strategy.md` | Yes (section A). This is our own research, not a transcript. |
 | S4 | Product-page decisions: no prices, "Book a free demo", Clara's WhatsApp, LinkedIn + SEO as the core | 26 Oct 2026 | Memory / main chat | Yes |
@@ -24,7 +24,7 @@ Tags: [S1–S4] = the source the rule came from. [Suggestion] = my own idea, not
 9. **Entities and off-site mentions.** AI engines lean on third parties (Clutch, GoodFirms, G2, LinkedIn articles that link back). [S3]
 10. **Tech:** canonicals, sitemap and robots on www; llms.txt; a real 404. [S3] *Check that these are still fixed.*
 11. **One real screenshot per post**, blurred, approved by Yogansh, followed by a Clara WhatsApp CTA line. [S4]
-12. *[Pending S1]* Surfer-specific tactics (e.g. content scoring, term coverage, how AI answers pick sources) get added once the transcript is on the box. None are invented here.
+12. Surfer/SEO-GEO tactics now live in the `seo-geo-content-playbook` skill (money pages first, one cluster at a time built bottom-up, answer in the first 40–60 words, FAQ with schema, refresh old posts, off-site mentions, monthly AI-answer checks). Follow that skill for every post.
 
 ## B. Landing / product page rules (LinkedIn Outreach Agent, SEO Agent)
 1. **Plain, simple, direct words.** One idea per line, no jargon. [S2]
