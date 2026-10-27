@@ -25,9 +25,13 @@ Plan from 26 Oct 2026: core focus on the AI LinkedIn Outreach Agent and AI SEO A
 | todo | linkedin lead generation services india | Problem-led, India B2B, LinkedIn outreach agent; human + AI, replies on WhatsApp. |  |
 | todo | linkedin outreach automation case study | PROOF post: Haique Surfaces (345 reached, 107 accepted = 31%, 14 replies; JLL India Teams meeting) + Sanjeet Ray coach (149 invites, 43 connections, 12 conversations, 3 warm leads). Yogansh approved naming both and these numbers. Use blurred reply screenshots from /workspace/clara-web-proof/linkedin/ ONLY after Riddhi/Yogansh approves the exact images. No prices. |  |
 | todo | how to get more replies on linkedin outreach | Problem-led, India/UAE B2B, LinkedIn outreach agent; personalised messages, follow-ups, replies land on WhatsApp | |
+| todo | best ai linkedin outreach agents | Commercial roundup, global B2B, LinkedIn outreach agent; links /ai-linkedin-outreach-agent. Source: clara-redesign-v3/seo-money-pages/before-after.md (27 Oct) |  |
+| todo | ai agent for linkedin lead generation | Commercial, global B2B, LinkedIn outreach agent; links /ai-linkedin-outreach-agent. Source: clara-redesign-v3/seo-money-pages/before-after.md (27 Oct) |  |
 | todo | ai seo agent case study | PROOF post: our own claraai.tech results since the SEO agent started 10 Oct 2026. Use the real GA4 screenshots in /workspace/clara-web-proof/seo/ (03: organic search sessions 498 vs 389, +28%, 10–25 Oct vs 24 Sep–9 Oct; 04/05: blog views 58 vs 14; 02 channel chart). Own numbers are OK to show. Don't use 06 (Search Console has no baseline). CTA under each screenshot. |  |
 | todo | seo for b2b companies india | Problem-led, India B2B, SEO agent; how an AI SEO agent writes, publishes and tracks content daily; link /ai-seo-agent | |
 | todo | what is an ai seo agent | Definition, global, SEO agent; SEO + GEO (AI search) explained simply. |  |
 | todo | geo generative engine optimization | Definition, global, SEO agent; getting cited by ChatGPT/Google AI answers, simple language | |
+| todo | ai seo agent vs seo agency vs seo tool | Comparison, global B2B, SEO agent; links /ai-seo-agent. Source: clara-redesign-v3/seo-money-pages/before-after.md (27 Oct) |  |
+| todo | ai seo blog automation | Commercial, global B2B, SEO agent; links /ai-seo-agent. Source: clara-redesign-v3/seo-money-pages/before-after.md (27 Oct) |  |
 | todo | ai chatbot cost uae | Comparison / cost guide, UAE/Gulf, chatbots; Arabic/English/Hindi; public ranges only. |  |
 | todo | ai calling agent vs human telecaller | Comparison, India + Gulf, calling agents. |  |
