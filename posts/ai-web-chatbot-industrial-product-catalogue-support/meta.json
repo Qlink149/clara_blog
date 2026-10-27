@@ -41,5 +41,10 @@
   "cta": {
     "heading": "Want to see your own catalogue in a conversation?",
     "text": "Your buyers are already asking technical questions after hours. To see what an AI web chatbot for industrial product catalogue support would look like on your website, book a free demo with Clara AI."
+  },
+  "fit": {
+    "for": "Manufacturers and industrial B2B sellers, their founders and sales heads, whose engineers answer the same catalogue questions every day.",
+    "notFit": "You only want one-off social media posting, or you have no budget for a paid monthly service.",
+    "results": "Clara AI builds and runs the agent for you, with a first demo within 7 days of getting your material."
   }
 }

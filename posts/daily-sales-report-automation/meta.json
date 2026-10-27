@@ -14,15 +14,35 @@
   },
   "faq_heading": "Questions owners ask about daily sales report automation",
   "faqs": [
-    {"q": "How much does daily sales report automation cost?", "a": "Cost depends on the number of stores, the systems it connects to and the measures you want. Clara AI sets the scope after a diagnosis and then shares a clear proposal."},
-    {"q": "How long does it take to set up?", "a": "Setup depends on the number of sources, the quality of the data and how quickly your team agrees the measures. Clara AI delivers a first demo within 7 days of receiving your material and confirms the full timeline after diagnosis."},
-    {"q": "Does it work if some stores still use spreadsheets?", "a": "Yes. Spreadsheets can be read like any other source. They are cleaned and matched, and over time you can move those stores onto a till system if you wish."},
-    {"q": "Can the summary be sent on WhatsApp?", "a": "Yes. It can go by email, WhatsApp or both. On WhatsApp, a daily message is sent as a pre-approved template, because a business can reply freely only within 24 hours of the person's last message."},
-    {"q": "Do we need a data team?", "a": "No. Clara AI builds, deploys and manages the system, and your team reviews the figures and decides what to do."}
+    {
+      "q": "How much does daily sales report automation cost?",
+      "a": "Cost depends on the number of stores, the systems it connects to and the measures you want. Clara AI sets the scope after a diagnosis and then shares a clear proposal."
+    },
+    {
+      "q": "How long does it take to set up?",
+      "a": "Setup depends on the number of sources, the quality of the data and how quickly your team agrees the measures. Clara AI delivers a first demo within 7 days of receiving your material and confirms the full timeline after diagnosis."
+    },
+    {
+      "q": "Does it work if some stores still use spreadsheets?",
+      "a": "Yes. Spreadsheets can be read like any other source. They are cleaned and matched, and over time you can move those stores onto a till system if you wish."
+    },
+    {
+      "q": "Can the summary be sent on WhatsApp?",
+      "a": "Yes. It can go by email, WhatsApp or both. On WhatsApp, a daily message is sent as a pre-approved template, because a business can reply freely only within 24 hours of the person's last message."
+    },
+    {
+      "q": "Do we need a data team?",
+      "a": "No. Clara AI builds, deploys and manages the system, and your team reviews the figures and decides what to do."
+    }
   ],
   "sources": [],
   "cta": {
     "heading": "Want to see your stores in one morning report?",
     "text": "Book a free demo with Clara AI."
+  },
+  "fit": {
+    "for": "B2B founders, sales heads and ops heads who spend hours each day building sales reports by hand.",
+    "notFit": "You only want one-off social media posting, or you have no budget for a paid monthly service.",
+    "results": "Clara AI builds and runs the agent for you, with a first demo within 7 days of getting your material."
   }
 }

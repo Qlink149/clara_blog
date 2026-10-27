@@ -4,7 +4,7 @@
   "description": "An AI chatbot for hospital appointment booking answers, books and reschedules on WhatsApp and the website in Arabic, English and Hindi, with staff handover.",
   "date": "2026-10-14",
   "author": "Yogansh Banthia",
-  "category": "AI Chatbots \u00b7 Healthcare",
+  "category": "AI Chatbots · Healthcare",
   "keyword": "ai chatbot for hospital appointment booking",
   "hero": {
     "file": "hero.webp",
@@ -41,5 +41,10 @@
   "cta": {
     "heading": "Want appointment requests answered at any hour?",
     "text": "Book a free demo with Clara AI."
+  },
+  "fit": {
+    "for": "Hospital and clinic owners and ops heads whose front desk is swamped with booking calls and messages.",
+    "notFit": "You only want one-off social media posting, or you have no budget for a paid monthly service.",
+    "results": "Clara AI builds and runs the agent for you, with a first demo within 7 days of getting your material."
   }
 }

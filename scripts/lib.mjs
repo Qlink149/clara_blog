@@ -111,6 +111,10 @@ export function validatePost(post, allPosts) {
         if (/<[a-z]/i.test(f.q + f.a)) err(`meta.json: faqs[${i}] must be plain text, no HTML`);
       }
     });
+  if (!m.fit || typeof m.fit !== 'object') err('meta.json: "fit" is missing (needs "for", "notFit" and "results"; see docs/POST_FORMAT.md)');
+  else for (const k of ['for', 'notFit', 'results'])
+    if (typeof m.fit[k] !== 'string' || !m.fit[k].trim()) err(`meta.json: fit.${k} is missing or empty`);
+    else if (/[₹$€£]|\brs\.?\s?\d|\binr\b/i.test(m.fit[k])) err(`meta.json: fit.${k} must not contain prices`);
   if (!Array.isArray(m.sources)) err('meta.json: "sources" must be a list (it can be empty)');
 
   // ---- images ----

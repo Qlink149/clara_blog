@@ -39,7 +39,7 @@ const A = `${BASE}/assets/site`;
 // WhatsApp CTA goes to Clara (the WhatsApp Agent). Each post carries its own source tag [WEB-BLOG-<slug>];
 // the index and other pages use [WEB-BLOG]. The template lives in site.config.json (ctaUrl, {tag} placeholder).
 let ctaTag = 'WEB-BLOG';
-const waUrl = (tag) => (config.ctaUrl || 'https://wa.me/919549549339?text={text}').replace('{text}', encodeURIComponent((config.ctaText || "Hi Clara, I read your blog post and I'd like a free demo [{tag}]").replace('{tag}', tag)));
+const waUrl = (tag) => (config.ctaUrl || 'https://wa.me/919549549339?text={text}').replace('{text}', encodeURIComponent((config.ctaText || "Hi Clara AI, my business is ___ and my goal is ___ [{tag}]").replace('{tag}', tag)));
 const WA_ = () => waUrl(ctaTag);
 const NAV = [
   ['Solutions', `${SITE}/#solutions`],
@@ -317,7 +317,13 @@ ${siteHeader()}
     <div class="hero">
       <img src="${postPath(m.slug)}images/${m.hero.file}" alt="${e(m.hero.alt)}" width="${p.heroSize.width}" height="${p.heroSize.height}" fetchpriority="high">
     </div>
-
+${m.fit ? `
+    <aside class="fit-box" aria-label="Who this is for">
+      <p><strong>Who this is for:</strong> ${e(m.fit.for)}</p>
+      <p><strong>Not a fit if:</strong> ${e(m.fit.notFit)}</p>
+      <p><strong>What to expect:</strong> ${e(m.fit.results)}</p>
+    </aside>
+` : ''}
 ${body}
 
     <section id="faq">
@@ -337,6 +343,7 @@ ${m.sources.map((s) => `        <li><a href="${e(s)}" target="_blank" rel="noope
       <ul class="cta-points">
 ${endCta.points.map((x) => `        <li>${e(x)}</li>`).join('\n')}
       </ul>
+      <p class="cta-qualify">Tell us on WhatsApp what your business does and the goal you want the agent to hit, and we'll show you a demo built for it.</p>
       <div class="btns">
         <a class="btn btn-light" href="${waUrl(`${ctaTag}-END`)}" target="_blank" rel="noopener" data-hide-float>Book a free demo${arrow}</a>
       </div>

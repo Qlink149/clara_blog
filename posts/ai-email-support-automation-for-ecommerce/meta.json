@@ -39,5 +39,10 @@
   "cta": {
     "heading": "Want to see your inbox sorted and drafted?",
     "text": "Book a free demo with Clara AI."
+  },
+  "fit": {
+    "for": "Ecommerce founders and support or ops heads drowning in repeat customer emails.",
+    "notFit": "You only want one-off social media posting, or you have no budget for a paid monthly service.",
+    "results": "Clara AI builds and runs the agent for you, with a first demo within 7 days of getting your material."
   }
 }

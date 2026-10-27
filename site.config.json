@@ -50,7 +50,7 @@
   },
   "logoFile": "assets/brand/clara-logo-white.png",
   "ctaUrl": "https://wa.me/919549549339?text={text}",
-  "ctaText": "Hi Clara, I read your blog post and I'd like a free demo [{tag}]",
+  "ctaText": "Hi Clara AI, my business is ___ and my goal is ___ [{tag}]",
   "nav": [
     {
       "label": "Why Clara",

@@ -4,7 +4,7 @@
   "description": "An AI calling agent for real estate lead follow-up phones new enquiries within minutes, qualifies them and books viewings. See how it works in Europe.",
   "date": "2026-10-13",
   "author": "Yogansh Banthia",
-  "category": "AI Calling Agents \u00b7 Real Estate",
+  "category": "AI Calling Agents · Real Estate",
   "keyword": "ai calling agent for real estate lead follow-up",
   "hero": {
     "file": "hero.webp",
@@ -41,5 +41,10 @@
   "cta": {
     "heading": "Want to see follow-up that starts in minutes?",
     "text": "Book a free demo with Clara AI."
+  },
+  "fit": {
+    "for": "Real estate founders and sales heads with more leads than the team can follow up on.",
+    "notFit": "You only want one-off social media posting, or you have no budget for a paid monthly service.",
+    "results": "Clara AI builds and runs the agent for you, with a first demo within 7 days of getting your material."
   }
 }

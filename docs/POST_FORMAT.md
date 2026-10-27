@@ -102,3 +102,15 @@ assistants cannot read text inside an image.
 - `width` and `height` must be the file's real size.
 - No unused files in `images/`.
 - The hero is set in `meta.json`, not in `body.html`. The share preview is made from it.
+
+## Who this is for box (required: `meta.fit`)
+
+Every post needs `"fit": {"for": "...", "notFit": "...", "results": "..."}` in meta.json. The build renders it as a box (`.fit-box`) just under the hero image so readers who don't fit filter themselves out. `npm run validate` fails if it is missing, empty, or contains a price.
+
+- `for`: B2B founders, sales or ops heads, plus the post's specific problem.
+- `notFit`: e.g. one-off social media posting, or no budget for a paid monthly service. Never a price.
+- `results`: only approved dated proof (Haique Surfaces, as of 21 Oct 2026: 345 reached, 107 accepted (31%), 14 replies; Sanjeet Ray, business coach, Oct 2026: 149 invites, 43 connections, 12 conversations, 3 warm leads; own analytics: +28% organic sessions, 10–25 Oct vs 24 Sep–9 Oct) or "first demo within 7 days".
+
+## Qualifying CTA
+
+The WhatsApp prefill (`ctaText` in site.config.json) is "Hi Clara AI, my business is ___ and my goal is ___ [TAG]". The end box shows a line above the button asking readers to say what their business does and the goal for the agent. Button text stays "Book a free demo".

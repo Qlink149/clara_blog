@@ -42,5 +42,10 @@
   "cta": {
     "heading": "Want to see it work for your business?",
     "text": "Book a free demo with Clara AI."
+  },
+  "fit": {
+    "for": "B2B founders and ops heads budgeting for a custom chatbot that handles real customer or sales questions.",
+    "notFit": "You want a free plug-in widget, one-off social media posting, or have no budget for a paid monthly service.",
+    "results": "Clara AI builds and runs the agent for you, with a first demo within 7 days of getting your material."
   }
 }
