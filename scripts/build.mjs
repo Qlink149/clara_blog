@@ -72,6 +72,49 @@ const SVC = [
 const arrow = '<svg class="arr" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const waBtn = (label = 'Book a free demo', cls = 'btn-primary') => `<a class="btn ${cls}" href="${WA_()}" target="_blank" rel="noopener" data-hide-float>${label}${arrow}</a>`;
 
+// Standard end-of-post CTA box, picked by cluster: 'linkedin', 'seo' or 'general'.
+// Proof lines are the approved, dated figures only. Do not add prices or other claims.
+const END_CTA = {
+  linkedin: {
+    heading: 'Get warm LinkedIn replies without the manual work',
+    points: [
+      'More conversations with the right buyers on LinkedIn, every week.',
+      'We run it for you. You get warm replies on WhatsApp.',
+      'Haique Surfaces, as of 21 Oct 2026: 345 reached, 107 accepted, 14 replies.',
+    ],
+  },
+  seo: {
+    heading: 'Get found on Google and AI search, every day',
+    points: [
+      'Fresh, search-ready posts that bring buyers to your site.',
+      'We run it for you. You get the traffic.',
+      'Our own blog: organic sessions up 28% (10–25 Oct vs 24 Sep–9 Oct 2026).',
+    ],
+  },
+  general: {
+    heading: 'Put an AI agent to work in your business',
+    points: [
+      'Faster replies and less manual work for your team.',
+      'We build and run it for you. You get the results.',
+      'Clara AI builds AI agents for 19 businesses, including Hiranandani and Vijay Sales.',
+    ],
+  },
+};
+// Cluster comes from the post's topics.md row (keyword + notes) when there is one, else from slug + keyword.
+// meta.cluster ('linkedin' | 'seo' | 'general') overrides both.
+const topicRows = (() => {
+  try {
+    return fs.readFileSync(path.join(ROOT, 'topics.md'), 'utf8').split('\n').filter((l) => l.startsWith('|')).map((l) => l.split('|').map((c) => c.trim()));
+  } catch { return []; }
+})();
+const pickCluster = (t) => (/linkedin/i.test(t) ? 'linkedin' : /\bseo\b|\bgeo\b|generative engine|ai search/i.test(t) ? 'seo' : 'general');
+function clusterOf(m) {
+  if (END_CTA[m.cluster]) return m.cluster;
+  const row = topicRows.find((c) => c[4] === m.slug);
+  if (row) return pickCluster(`${row[2]} ${row[3]}`.replace(/Link both products.*/i, ''));
+  return pickCluster(`${m.slug} ${m.keyword}`);
+}
+
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const niceDate = (iso) => {
   const [y, m, d] = iso.split('-').map(Number);
@@ -185,7 +228,11 @@ const card = (p, tag = 'h2', featured = false) => `<article class="card${feature
 
 function renderPost(p) {
   const m = p.meta;
-  ctaTag = (m.cta && m.cta.tag) || `WEB-BLOG-${m.slug}`;
+  // Tags: header, floating, mid and footer buttons carry [WEB-BLOG-<slug>]; the end box carries -END;
+  // any WhatsApp button inside body.html (the proof box) is rewritten to -IN. meta.cta.tag is ignored.
+  ctaTag = `WEB-BLOG-${m.slug}`;
+  const cluster = clusterOf(m);
+  const endCta = END_CTA[cluster];
   const url = postUrl(m.slug);
   const role = config.authors[m.author]?.role;
   const ogImage = `${url}og.jpg`;
@@ -194,8 +241,8 @@ function renderPost(p) {
     .replace(/<table\b[\s\S]*?<\/table>/gi, (t) => `<div class="table-wrap">${t}</div>`)
     .replace(/href="https:\/\/claraai\.tech(?=[\/"#])/gi, `href="${SITE}`)
     .replace(/<a\b([^>]*href="https:\/\/(?!(?:www\.)?claraai\.tech)[^"]*"[^>]*)>/gi, (tag, inner) =>
-      /\srel=/.test(inner) ? tag : `<a${inner.replace(/\starget="[^"]*"/, '')} target="_blank" rel="noopener">`);
-  const cta = m.cta || config.defaultCta;
+      /\srel=/.test(inner) ? tag : `<a${inner.replace(/\starget="[^"]*"/, '')} target="_blank" rel="noopener">`)
+    .replace(/href="https:\/\/wa\.me\/919549549339\?[^"]*"/gi, `href="${waUrl(`${ctaTag}-IN`)}"`);
   // Mid-post call to action: goes in before the third h2 of the body (so after the second section).
   // Posts with fewer than three h2s get it before their last h2 instead.
   const midCta = `<aside class="cta-mid" aria-label="Book a free demo">
@@ -285,13 +332,15 @@ ${m.sources.map((s) => `        <li><a href="${e(s)}" target="_blank" rel="noope
       </ul>
     </section>` : ''}
 
-    <aside class="cta-box">
-      <h2>${e(cta.heading)}</h2>
-      <p>${e(cta.text)}</p>
+    <aside class="cta-box" data-cluster="${cluster}">
+      <h2>${e(endCta.heading)}</h2>
+      <ul class="cta-points">
+${endCta.points.map((x) => `        <li>${e(x)}</li>`).join('\n')}
+      </ul>
       <div class="btns">
-        ${waBtn('Book a free demo', 'btn-light')}
-        <a class="btn btn-ghost" href="mailto:${config.contactEmail}">${e(config.contactEmail)}</a>
+        <a class="btn btn-light" href="${waUrl(`${ctaTag}-END`)}" target="_blank" rel="noopener" data-hide-float>Book a free demo${arrow}</a>
       </div>
+      <p class="cta-risk">Free demo, no obligation. If we're not a fit, we'll tell you.</p>
     </aside>
   </div>
 </article>
