@@ -5,6 +5,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execSync } from 'node:child_process';
 import sharp from 'sharp';
+import { postTitleTag } from './lib.mjs';
 import { ROOT, config, escapeHtml as e, loadAndValidate, report } from './lib.mjs';
 
 const BASE = config.basePath; // "/blog"
@@ -240,7 +241,7 @@ function renderPost(p) {
   ];
 
   return `${head({
-    title: `${m.title} | ${config.siteName}`,
+    title: postTitleTag(m),
     description: m.description,
     canonical: url,
     image: ogImage,

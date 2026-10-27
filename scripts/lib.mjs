@@ -15,6 +15,15 @@ export const stripTags = (html) =>
   html.replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
 
 /** Width and height of a WebP file, read from its header. Returns null if it is not WebP. */
+// The <title> for a post: "Title | Clara AI" when that fits in 60 characters, otherwise the
+// title alone. meta.seoTitle (optional) overrides the H1 text for the <title> only.
+export const TITLE_TAG_MAX = 60;
+export function postTitleTag(m) {
+  const base = m.seoTitle || m.title || '';
+  const full = `${base} | ${config.siteName}`;
+  return full.length <= TITLE_TAG_MAX ? full : base;
+}
+
 export function webpSize(file) {
   const b = fs.readFileSync(file);
   if (b.length < 30 || b.toString('ascii', 0, 4) !== 'RIFF' || b.toString('ascii', 8, 12) !== 'WEBP') return null;
@@ -73,6 +82,8 @@ export function validatePost(post, allPosts) {
   if (m.title && m.title.length > L.titleMaxChars) err(`meta.json: title is ${m.title.length} characters, max is ${L.titleMaxChars}`);
   if (m.description && (m.description.length < L.descriptionMinChars || m.description.length > L.descriptionMaxChars))
     err(`meta.json: description is ${m.description.length} characters, must be ${L.descriptionMinChars} to ${L.descriptionMaxChars}`);
+  if (m.title && postTitleTag(m).length > TITLE_TAG_MAX)
+    err(`meta.json: <title> "${postTitleTag(m)}" is ${postTitleTag(m).length} characters, max is ${TITLE_TAG_MAX} (shorten the title or add seoTitle)`);
   if (m.title) {
     for (const name of config.clientNamesNotAllowedInTitles)
       if (m.title.toLowerCase().includes(name.toLowerCase())) err(`meta.json: client name "${name}" is not allowed in the title`);
@@ -163,8 +174,8 @@ export function validatePost(post, allPosts) {
     let u;
     try { u = new URL(href); } catch { err(`body.html: link "${href}" must be a full https:// address`); continue; }
     if (u.protocol !== 'https:') err(`body.html: link "${href}" must use https`);
-    if (u.hostname === `www.${bareHost}`) err(`body.html: link "${href}" must use ${bareHost} without www`);
-    else if (u.hostname !== bareHost) external.add(href);
+    // www.claraai.tech is the canonical host (claraai.tech 308-redirects to it), so both are allowed.
+    else if (u.hostname !== bareHost && u.hostname !== `www.${bareHost}`) external.add(href);
   }
   if (Array.isArray(m.sources)) {
     for (const href of external) if (!m.sources.includes(href)) err(`body.html links to ${href} but it is not listed in meta.json "sources"`);
