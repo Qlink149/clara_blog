@@ -185,7 +185,7 @@ const card = (p, tag = 'h2', featured = false) => `<article class="card${feature
 
 function renderPost(p) {
   const m = p.meta;
-  ctaTag = `WEB-BLOG-${m.slug}`;
+  ctaTag = (m.cta && m.cta.tag) || `WEB-BLOG-${m.slug}`;
   const url = postUrl(m.slug);
   const role = config.authors[m.author]?.role;
   const ogImage = `${url}og.jpg`;

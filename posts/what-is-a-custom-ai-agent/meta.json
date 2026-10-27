@@ -14,15 +14,31 @@
   },
   "faq_heading": "Questions owners ask about custom AI agents",
   "faqs": [
-    {"q": "Do I need a tech team to use a custom AI agent?", "a": "No. Clara AI handles the build, deployment and ongoing management, so your staff only need to review results and give feedback."},
-    {"q": "Can a custom AI agent connect to the systems I already use?", "a": "Yes. It is built to work with your existing CRM, ERP, email and spreadsheets, so you do not have to replace them."},
-    {"q": "Will a custom AI agent replace my staff?", "a": "No. It takes over repetitive tasks, and your team keeps control of decisions, exceptions and customer relationships."},
-    {"q": "What languages do Clara AI's chatbots and calling agents support?", "a": "They work in English and Hindi."},
-    {"q": "How quickly can I see a working demo?", "a": "Clara AI delivers a first demo within 7 days of receiving your material."}
+    {
+      "q": "Do I need a tech team to use a custom AI agent?",
+      "a": "No. Clara AI handles the build, deployment and ongoing management, so your staff only need to review results and give feedback."
+    },
+    {
+      "q": "Can a custom AI agent connect to the systems I already use?",
+      "a": "Yes. It is built to work with your existing CRM, ERP, email and spreadsheets, so you do not have to replace them."
+    },
+    {
+      "q": "Will a custom AI agent replace my staff?",
+      "a": "No. It takes over repetitive tasks, and your team keeps control of decisions, exceptions and customer relationships."
+    },
+    {
+      "q": "What languages do Clara AI's chatbots and calling agents support?",
+      "a": "They work in English and Hindi."
+    },
+    {
+      "q": "How quickly can I see a working demo?",
+      "a": "Clara AI delivers a first demo within 7 days of receiving your material."
+    }
   ],
   "sources": [],
   "cta": {
     "heading": "Have one repetitive job you'd like to hand over?",
-    "text": "Book a free demo with Clara AI."
+    "text": "Book a free demo with Clara AI.",
+    "tag": "WEB-BLOG-what-is-a-custom-ai-agent-END"
   }
 }

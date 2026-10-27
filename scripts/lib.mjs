@@ -171,6 +171,7 @@ export function validatePost(post, allPosts) {
   for (const href of links) {
     if (!href) { err('body.html: a link has no href'); continue; }
     if (href.startsWith('mailto:')) continue;
+    if (href.startsWith('https://wa.me/919549549339?')) continue; // our own WhatsApp CTA, not a source
     let u;
     try { u = new URL(href); } catch { err(`body.html: link "${href}" must be a full https:// address`); continue; }
     if (u.protocol !== 'https:') err(`body.html: link "${href}" must use https`);
