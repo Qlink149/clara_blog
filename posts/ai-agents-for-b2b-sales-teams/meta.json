@@ -1,0 +1,49 @@
+{
+  "title": "AI Agents for B2B Sales Teams: Use Cases, ROI, Real Results",
+  "slug": "ai-agents-for-b2b-sales-teams",
+  "description": "Where AI agents help B2B sales teams most: LinkedIn outreach, lead follow-up, calling and reporting, with real dated results and how to judge the ROI.",
+  "date": "2026-11-02",
+  "author": "Yogansh Banthia",
+  "category": "AI Agents · B2B Sales",
+  "keyword": "ai agents for b2b sales teams",
+  "cluster": "linkedin",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "AI agents for B2B sales teams: a laptop showing a sales pipeline with reply received and meeting booked chips, beside the post title",
+    "width": 1600,
+    "height": 900
+  },
+  "fit": {
+    "for": "B2B founders and sales heads, in any country, whose team spends hours on prospecting, follow-ups and updates instead of selling, and who want more qualified meetings each month.",
+    "notFit": "One-off campaigns, low-value consumer products, or teams with no budget for a paid monthly service.",
+    "results": "Haique Surfaces, as of 21 Oct 2026: 345 reached, 107 accepted (31%), 14 replies. Sanjeet Ray, business coach, Oct 2026: 149 invites, 43 connections, 12 conversations, 3 warm leads."
+  },
+  "faq_heading": "Questions B2B sales heads ask about AI agents",
+  "faqs": [
+    {
+      "q": "What is an AI agent for a B2B sales team?",
+      "a": "It is software that does a sales task from start to finish, such as finding prospects, sending LinkedIn messages, following up on leads or updating your CRM. Unlike a simple tool, it decides the next step on its own within rules you set, and hands warm conversations to your team."
+    },
+    {
+      "q": "Will an AI agent replace my sales reps?",
+      "a": "No. It takes the repetitive work off their plate, like first messages, follow-ups and data entry. Your reps still run discovery calls, handle objections and close deals. Most teams use the time saved for more conversations with qualified buyers."
+    },
+    {
+      "q": "Where should a B2B sales team start with AI agents?",
+      "a": "Start where the most time is lost or the most leads go cold. For many B2B teams that is LinkedIn prospecting or slow follow-up on inbound leads. Pick one job, measure it for a month, then add the next."
+    },
+    {
+      "q": "How do I measure the ROI of an AI sales agent?",
+      "a": "Track the numbers that lead to revenue: people reached, replies, qualified conversations and meetings booked. Compare them with the month before the agent started, and add the hours your team saved. Ask any vendor for real dated results, not projections."
+    },
+    {
+      "q": "Is LinkedIn outreach with an AI agent safe for my account?",
+      "a": "A well-run agent sends a limited number of personal messages each day, at a human pace, and stops when someone replies. Avoid tools that blast hundreds of identical messages, which can get an account restricted and damage your reputation."
+    },
+    {
+      "q": "Who are AI sales agents not right for?",
+      "a": "They are not right for one-off campaigns, low-value consumer products, or teams with no budget for a paid monthly service. They work best for B2B companies where one new client is worth a meaningful amount."
+    }
+  ],
+  "sources": []
+}
