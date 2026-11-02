@@ -243,11 +243,14 @@ function renderPost(p) {
     .replace(/<a\b([^>]*href="https:\/\/(?!(?:www\.)?claraai\.tech)[^"]*"[^>]*)>/gi, (tag, inner) =>
       /\srel=/.test(inner) ? tag : `<a${inner.replace(/\starget="[^"]*"/, '')} target="_blank" rel="noopener">`)
     .replace(/href="https:\/\/wa\.me\/919549549339\?[^"]*"/gi, `href="${waUrl(`${ctaTag}-IN`)}"`);
+  // Posts without a proof-box WhatsApp button get the -IN tag on the mid-post button instead,
+  // so every post carries exactly one -IN and one -END.
+  const hasInCta = bodyRaw.includes(`${ctaTag}-IN`);
   // Mid-post call to action: goes in before the third h2 of the body (so after the second section).
   // Posts with fewer than three h2s get it before their last h2 instead.
   const midCta = `<aside class="cta-mid" aria-label="Book a free demo">
       <p class="cta-mid-text"><strong>See it working on your data.</strong> First demo within 7 days.</p>
-      ${waBtn()}
+      ${hasInCta ? waBtn() : `<a class="btn btn-primary" href="${waUrl(`${ctaTag}-IN`)}" target="_blank" rel="noopener" data-hide-float>Book a free demo${arrow}</a>`}
     </aside>
 
 `;
