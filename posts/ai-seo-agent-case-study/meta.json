@@ -1,0 +1,25 @@
+{
+  "title": "AI SEO Agent Case Study: +28% Organic Sessions in 16 Days",
+  "slug": "ai-seo-agent-case-study",
+  "description": "A real AI SEO agent case study: our own GA4 data after the agent started on 10 Oct 2026, with organic sessions up 28% and blog views from 14 to 58.",
+  "date": "2026-11-05",
+  "author": "Yogansh Banthia",
+  "category": "AI SEO Agent · Case Study",
+  "keyword": "ai seo agent case study",
+  "cluster": "seo",
+  "hero": {"file": "hero.webp", "alt": "Illustration of an AI SEO agent lifting a website's organic search traffic", "width": 1280, "height": 720},
+  "fit": {
+    "for": "B2B founders and marketing, sales or ops heads, in any country, who want their website to bring in buyers from Google and AI search without hiring a content team.",
+    "notFit": "One-off blog writing, consumer brands chasing viral traffic, or teams with no budget for a paid monthly service.",
+    "results": "Own analytics: +28% organic sessions, 10–25 Oct vs 24 Sep–9 Oct 2026."
+  },
+  "faq_heading": "Questions buyers ask about this AI SEO agent case study",
+  "faqs": [
+    {"q": "What did the AI SEO agent actually do on claraai.tech?", "a": "From 10 Oct 2026 it researched buyer keywords, wrote and published blog posts on a daily schedule, linked them to our service pages, kept the sitemap current and asked Google to index new posts."},
+    {"q": "Are these numbers from a client?", "a": "No. They are our own Google Analytics 4 figures for claraai.tech, so we can show the real screenshots without sharing any client data."},
+    {"q": "Is 16 days enough to judge an SEO agent?", "a": "It is enough to see early movement, not the full result. SEO compounds, so we judge rankings, leads and booked calls over three months or more."},
+    {"q": "Does an AI SEO agent also help with ChatGPT and AI search?", "a": "Yes. AI assistants tend to cite pages that already rank and answer questions clearly, so the same structured, question-led posts help with both Google and AI search."},
+    {"q": "Do I need to write or approve every post?", "a": "No. We agree topics, facts and tone with you once, then the agent runs daily. You can review posts whenever you like."}
+  ],
+  "sources": ["https://support.google.com/analytics/answer/9143382"]
+}
