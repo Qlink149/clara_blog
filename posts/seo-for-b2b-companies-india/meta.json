@@ -1,0 +1,25 @@
+{
+  "title": "SEO for B2B Companies in India: An AI Agent Runs It Daily",
+  "slug": "seo-for-b2b-companies-india",
+  "description": "SEO for B2B companies in India, explained: why most sites get no buyers from Google, and how an AI SEO agent writes, publishes and tracks content every day.",
+  "date": "2026-11-06",
+  "author": "Yogansh Banthia",
+  "category": "AI SEO Agent · India B2B",
+  "keyword": "seo for b2b companies india",
+  "cluster": "seo",
+  "hero": {"file": "hero.webp", "alt": "Illustration of an AI SEO agent beside a laptop showing rising search traffic, with blog posts and reports linked to a map of India", "width": 1280, "height": 720},
+  "fit": {
+    "for": "B2B founders and sales, marketing or ops heads in India (or selling into India) whose website brings in few or no buyers from Google and AI search, and who have no time to run a content team.",
+    "notFit": "One-off blog writing, consumer brands chasing viral traffic, or teams with no budget for a paid monthly service.",
+    "results": "Own analytics: +28% organic sessions, 10–25 Oct vs 24 Sep–9 Oct 2026. We aim to show you a first demo within 7 days."
+  },
+  "faq_heading": "Questions B2B companies in India ask about SEO",
+  "faqs": [
+    {"q": "Does SEO work for B2B companies in India?", "a": "Yes, when it targets the questions real buyers type before they shortlist a vendor. B2B search volumes are smaller than consumer ones, but each visitor is worth far more, so a few well-matched posts can bring in serious enquiries."},
+    {"q": "How long does B2B SEO take to show results?", "a": "Expect a foundation in the first month and early movement in impressions and rankings, with leads building over three months or more. On our own site, organic sessions rose 28% in the first 16 days after the agent started."},
+    {"q": "What does an AI SEO agent do every day?", "a": "It picks a buyer keyword, writes a post that answers it, adds internal links to your service pages, publishes it, asks Google to index it and tracks clicks, impressions and leads."},
+    {"q": "Will AI-written posts hurt my rankings?", "a": "Google judges content on how helpful it is, not on how it was made. The agent writes from your approved facts and real examples, and you can review any post."},
+    {"q": "Does it also help with ChatGPT and AI search?", "a": "Yes. AI assistants tend to cite pages that already rank and answer questions clearly, so question-led, well-structured posts help with both."}
+  ],
+  "sources": ["https://developers.google.com/search/docs/fundamentals/seo-starter-guide"]
+}
