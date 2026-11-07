@@ -1,0 +1,25 @@
+{
+  "title": "What Is an AI SEO Agent? SEO and AI Search, Explained",
+  "slug": "what-is-an-ai-seo-agent",
+  "description": "What is an AI SEO agent? A plain guide to how it researches, writes, publishes and tracks content so B2B buyers find you on Google and in AI search answers.",
+  "date": "2026-11-08",
+  "author": "Yogansh Banthia",
+  "category": "AI SEO Agent · B2B Marketing",
+  "keyword": "what is an ai seo agent",
+  "cluster": "seo",
+  "hero": {"file": "hero.webp", "alt": "What is an AI SEO agent: a laptop showing a search result and an AI answer citing it", "width": 1280, "height": 720},
+  "fit": {
+    "for": "B2B founders and sales, marketing or ops heads whose website gets few buyers from Google or ChatGPT-style AI search, and who have no time or team to publish content every week.",
+    "notFit": "One-off blog writing, cheap social media posting, consumer brands chasing viral traffic, or teams with no budget for a paid monthly service.",
+    "results": "Own analytics: +28% organic sessions, 10–25 Oct vs 24 Sep–9 Oct 2026. We aim to show you a first demo within 7 days."
+  },
+  "faq_heading": "Questions people ask about AI SEO agents",
+  "faqs": [
+    {"q": "What is an AI SEO agent in simple words?", "a": "It is software that does the daily SEO work a person would do: it picks the questions your buyers search, writes and publishes answers on your website, asks Google to index them and reports what is working."},
+    {"q": "Is an AI SEO agent the same as an AI writing tool?", "a": "No. A writing tool gives you a draft and stops. An agent runs the whole loop, from keyword research to publishing, internal links, indexing and tracking, every day without someone pressing buttons."},
+    {"q": "What is the difference between SEO and GEO?", "a": "SEO helps your pages rank and get clicked on Google. GEO, or generative engine optimization, helps your pages get cited inside AI answers from tools like ChatGPT, Gemini and Google AI Overviews. Clear, well-structured pages that already rank help with both."},
+    {"q": "How long before an AI SEO agent shows results?", "a": "Expect the foundation in the first month and early movement in impressions and rankings, with leads building over three months or more. On our own site, organic sessions rose 28% from 10–25 Oct vs 24 Sep–9 Oct 2026."},
+    {"q": "Will Google penalise content written by an AI agent?", "a": "Google says it rewards helpful, reliable content however it is made. The agent writes from your approved facts and real examples, and you can review any post before or after it goes live."}
+  ],
+  "sources": ["https://developers.google.com/search/docs/fundamentals/seo-starter-guide", "https://developers.google.com/search/docs/appearance/ai-features"]
+}
