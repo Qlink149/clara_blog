@@ -1,0 +1,25 @@
+{
+  "title": "GEO (Generative Engine Optimization): Get Cited by AI",
+  "slug": "geo-generative-engine-optimization",
+  "description": "What is GEO, or generative engine optimization? A plain B2B guide to getting your website cited in ChatGPT, Gemini and Google AI answers, and how to start.",
+  "date": "2026-11-09",
+  "author": "Yogansh Banthia",
+  "category": "AI SEO Agent · B2B Marketing",
+  "keyword": "generative engine optimization",
+  "cluster": "seo",
+  "hero": {"file": "hero.webp", "alt": "Generative engine optimization: a laptop showing an AI answer that cites a website", "width": 1280, "height": 720},
+  "fit": {
+    "for": "B2B founders and sales, marketing or ops heads whose buyers now shortlist vendors in ChatGPT, Gemini or Google AI answers, and whose company never shows up there.",
+    "notFit": "Consumer brands chasing viral traffic, one-off blog writing, cheap social media posting, or teams with no budget for a paid monthly service.",
+    "results": "Own analytics: +28% organic sessions, 10–25 Oct vs 24 Sep–9 Oct 2026. We aim to show you a first demo within 7 days."
+  },
+  "faq_heading": "Questions people ask about GEO",
+  "faqs": [
+    {"q": "What is GEO in simple words?", "a": "GEO, or generative engine optimization, is the work of making your web pages easy for AI tools like ChatGPT, Gemini, Perplexity and Google AI Overviews to find, trust and quote when a buyer asks them a question."},
+    {"q": "Is GEO replacing SEO?", "a": "No. AI tools mostly pull from pages that search engines can already crawl and rank, so good SEO is the base. GEO adds clear answers, structure and proof on top, so those pages get quoted, not just ranked."},
+    {"q": "How do I know if AI tools are citing my company?", "a": "Write down ten to twenty questions your buyers actually ask, ask them in ChatGPT, Gemini, Perplexity and Google every week, and note whether your brand or pages are named. Track the same list over time."},
+    {"q": "How long does GEO take to work?", "a": "Expect the groundwork in the first month and early citations over the following months, once a cluster of clear pages on your topic is indexed and ranking. Nobody can promise a date, because the AI tools change often."},
+    {"q": "Can an AI SEO agent do GEO for me?", "a": "Yes. Clara AI's SEO agent publishes answer-first posts with FAQs and schema every day, links them into a topic cluster, asks Google to index them and checks a fixed list of buyer questions in AI tools every week."}
+  ],
+  "sources": ["https://developers.google.com/search/docs/appearance/ai-features", "https://arxiv.org/abs/2311.09735"]
+}
