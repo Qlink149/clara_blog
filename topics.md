@@ -37,3 +37,6 @@ Plan from 26 Oct 2026: core focus on the AI LinkedIn Outreach Agent and AI SEO A
 | todo | ai seo blog automation | Commercial, global B2B, SEO agent; links /ai-seo-agent. Source: clara-redesign-v3/seo-money-pages/before-after.md (27 Oct) |  |
 | todo | ai chatbot cost uae | Comparison / cost guide, UAE/Gulf, chatbots; Arabic/English/Hindi; public ranges only. |  |
 | todo | ai calling agent vs human telecaller | Comparison, India + Gulf, calling agents. |  |
+| todo | linkedin outreach agent for b2b saas | Commercial, global B2B, LinkedIn agent; links /ai-linkedin-outreach-agent; named proof near top (Haique, Sanjeet) |  |
+| todo | how to get cited by chatgpt for b2b companies | Commercial how-to, global B2B, SEO agent (GEO cluster); links /ai-seo-agent and the GEO post |  |
+| todo | linkedin outreach agent vs sdr hire | Comparison / ROI, India + global B2B, LinkedIn agent; no prices; links /ai-linkedin-outreach-agent |  |
