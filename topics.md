@@ -33,7 +33,7 @@ Plan from 26 Oct 2026: core focus on the AI LinkedIn Outreach Agent and AI SEO A
 | done | linkedin outreach replies for b2b sales teams | Reframed from generic "how to get more replies on linkedin outreach" (27 Oct, lead quality): B2B buyer intent, for sales heads and founders; LinkedIn Outreach Agent; demoted | linkedin-outreach-replies-for-b2b-sales-teams |
 | done | what is an ai seo agent | Definition, global, SEO agent; SEO + GEO (AI search) explained simply. |  |
 | done | geo generative engine optimization | Definition, global, SEO agent; getting cited by ChatGPT/Google AI answers, simple language | 2026-11-09 geo-generative-engine-optimization |
-| todo | ai seo agent vs seo agency vs seo tool | Comparison, global B2B, SEO agent; links /ai-seo-agent. Source: clara-redesign-v3/seo-money-pages/before-after.md (27 Oct) |  |
+| done | ai seo agent vs seo agency vs seo tool | Comparison, global B2B, SEO agent; links /ai-seo-agent. Source: clara-redesign-v3/seo-money-pages/before-after.md (27 Oct) |  |
 | todo | ai seo blog automation | Commercial, global B2B, SEO agent; links /ai-seo-agent. Source: clara-redesign-v3/seo-money-pages/before-after.md (27 Oct) |  |
 | todo | ai chatbot cost uae | Comparison / cost guide, UAE/Gulf, chatbots; Arabic/English/Hindi; public ranges only. |  |
 | todo | ai calling agent vs human telecaller | Comparison, India + Gulf, calling agents. |  |
