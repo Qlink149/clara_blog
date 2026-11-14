@@ -38,5 +38,11 @@ Plan from 26 Oct 2026: core focus on the AI LinkedIn Outreach Agent and AI SEO A
 | done | ai chatbot cost uae | Comparison / cost guide, UAE/Gulf, chatbots; Arabic/English/Hindi; public ranges only. |  |
 | done | ai calling agent vs human telecaller | Comparison, India + Gulf, calling agents. | ai-calling-agent-vs-human-telecaller |
 | done | linkedin outreach agent for b2b saas | Commercial, global B2B, LinkedIn agent; links /ai-linkedin-outreach-agent; named proof near top (Haique, Sanjeet) | 2026-11-13 linkedin-outreach-agent-for-b2b-saas |
-| todo | how to get cited by chatgpt for b2b companies | Commercial how-to, global B2B, SEO agent (GEO cluster); links /ai-seo-agent and the GEO post |  |
+| done | how to get cited by chatgpt for b2b companies | Commercial how-to, global B2B, SEO agent (GEO cluster); links /ai-seo-agent and the GEO post | 2026-11-15 how-to-get-cited-by-chatgpt-for-b2b-companies |
 | todo | linkedin outreach agent vs sdr hire | Comparison / ROI, India + global B2B, LinkedIn agent; no prices; links /ai-linkedin-outreach-agent |  |
+| todo | linkedin outreach agent for founders who hate cold outreach | Commercial, global B2B founders, LinkedIn agent; who it fits / not; links /ai-linkedin-outreach-agent; dated Haique + Sanjeet proof | |
+| todo | how to book b2b sales meetings on linkedin | Commercial how-to, B2B sales heads, LinkedIn agent; steps + where a human stays; links /ai-linkedin-outreach-agent | |
+| todo | linkedin outreach agent for consultants and agencies | Commercial, global, LinkedIn agent; Sanjeet Ray (business coach) dated proof; links /ai-linkedin-outreach-agent | |
+| todo | ai seo agent for manufacturers and distributors | Commercial, India + global B2B, SEO agent; buyers who research before they call; links /ai-seo-agent | |
+| todo | how much does an ai seo agent cost vs hiring an seo manager | Comparison / ROI, B2B, SEO agent; NO Clara prices, public ranges only with sources; links /ai-seo-agent | |
+| todo | b2b ai search visibility audit checklist | Commercial how-to, global B2B, SEO agent (GEO cluster); prompt list + tracking method; links /ai-seo-agent and the GEO post | |
