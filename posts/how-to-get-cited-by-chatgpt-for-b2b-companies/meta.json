@@ -28,18 +28,21 @@
     },
     {
       "q": "How do I check whether ChatGPT mentions my company?",
-      "a": "Keep a fixed list of 10 to 20 buyer questions. Ask them in a fresh, logged-out window each week and note which companies are named and which pages are cited. Search Console does not show this traffic."
+      "a": "Keep a fixed list of 10 to 20 buyer questions. Ask them in a fresh, logged-out window each week and note which companies are named and which pages are cited. Search Console does not show when ChatGPT names you."
     },
     {
       "q": "Do I need a different page for every AI assistant?",
       "a": "No. One strong page that answers a buyer question directly works across ChatGPT, Gemini, Perplexity and Google. Write for the buyer's question, not for a single tool."
     }
   ],
-  "sources": [],
+  "sources": [
+    "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
   "hero": {
     "file": "hero.webp",
-    "alt": "How to get cited by ChatGPT for B2B companies: title card with three stacked answer blocks",
-    "width": 1280,
-    "height": 720
+    "alt": "How to get cited by ChatGPT for B2B companies: a laptop showing an AI answer that quotes a website as a source",
+    "width": 1600,
+    "height": 900
   }
 }
