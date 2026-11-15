@@ -1,0 +1,47 @@
+{
+  "title": "LinkedIn Outreach Agent vs SDR Hire: Which Fits B2B?",
+  "slug": "linkedin-outreach-agent-vs-sdr-hire",
+  "description": "LinkedIn outreach agent vs SDR hire: compare ramp time, daily consistency, reply handling and where a human still wins, with dated proof from two live users.",
+  "date": "2026-11-16",
+  "author": "Yogansh Banthia",
+  "category": "AI LinkedIn Outreach · Sales Hiring",
+  "keyword": "linkedin outreach agent vs sdr hire",
+  "cluster": "linkedin",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "LinkedIn outreach agent vs SDR hire: a laptop inbox showing buyer replies and follow-up chips",
+    "width": 1600,
+    "height": 900
+  },
+  "fit": {
+    "for": "B2B founders and sales heads deciding whether to hire an SDR or use an AI agent to fill the LinkedIn pipeline with demo calls.",
+    "notFit": "Teams that need someone on the phone closing deals today, one-off social media posting, or teams with no budget for a paid monthly service.",
+    "results": "Haique Surfaces, as of 21 Oct 2026: 345 reached, 107 accepted (31%), 14 replies. Sanjeet Ray, business coach, Oct 2026: 149 invites, 43 connections, 12 conversations, 3 warm leads. First demo within 7 days."
+  },
+  "faq_heading": "Questions founders ask about a LinkedIn agent versus an SDR",
+  "faqs": [
+    {
+      "q": "Can a LinkedIn outreach agent replace an SDR?",
+      "a": "It can replace the repetitive prospecting part: finding buyers, sending personal messages, following up and sorting replies. It does not replace discovery calls, demos or closing, which a person should still own."
+    },
+    {
+      "q": "How long does an SDR take to start producing pipeline?",
+      "a": "It varies by company. A new SDR first has to be hired, then learn the product, the buyer and the tone, so pipeline usually starts well after the start date. An agent setup is quicker: we aim to show a first demo within 7 days."
+    },
+    {
+      "q": "Is it safe to use an AI agent on LinkedIn?",
+      "a": "It is safer when the agent behaves like a careful person: modest daily volume, personal messages, pauses between actions and no more messages once someone replies. LinkedIn restricts spam-style automation, so high-volume blasting is the real risk."
+    },
+    {
+      "q": "Should I hire an SDR and use an agent together?",
+      "a": "Often that works well. The agent keeps the top of the funnel full every day, and the SDR spends time on the warm replies, calls and follow-up that need judgment."
+    },
+    {
+      "q": "Who sees the replies when an agent runs my outreach?",
+      "a": "You do. Warm replies are tagged the same day and passed to your founder or sales head on WhatsApp with the conversation, so a person can take over quickly."
+    }
+  ],
+  "sources": [
+    "https://www.linkedin.com/legal/user-agreement"
+  ]
+}
