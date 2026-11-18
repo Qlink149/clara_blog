@@ -41,7 +41,7 @@ Plan from 26 Oct 2026: core focus on the AI LinkedIn Outreach Agent and AI SEO A
 | done | how to get cited by chatgpt for b2b companies | Commercial how-to, global B2B, SEO agent (GEO cluster); links /ai-seo-agent and the GEO post | 2026-11-15 how-to-get-cited-by-chatgpt-for-b2b-companies |
 | done | linkedin outreach agent vs sdr hire | Comparison / ROI, India + global B2B, LinkedIn agent; no prices; links /ai-linkedin-outreach-agent | 2026-11-16 linkedin-outreach-agent-vs-sdr-hire |
 | done | linkedin outreach agent for founders who hate cold outreach | Commercial, global B2B founders, LinkedIn agent; who it fits / not; links /ai-linkedin-outreach-agent; dated Haique + Sanjeet proof | |
-| todo | how to book b2b sales meetings on linkedin | Commercial how-to, B2B sales heads, LinkedIn agent; steps + where a human stays; links /ai-linkedin-outreach-agent | |
+| done | how to book b2b sales meetings on linkedin | Commercial how-to, B2B sales heads, LinkedIn agent; steps + where a human stays; links /ai-linkedin-outreach-agent | 2026-11-18 how-to-book-b2b-sales-meetings-on-linkedin |
 | todo | linkedin outreach agent for consultants and agencies | Commercial, global, LinkedIn agent; Sanjeet Ray (business coach) dated proof; links /ai-linkedin-outreach-agent | |
 | todo | ai seo agent for manufacturers and distributors | Commercial, India + global B2B, SEO agent; buyers who research before they call; links /ai-seo-agent | |
 | todo | how much does an ai seo agent cost vs hiring an seo manager | Comparison / ROI, B2B, SEO agent; NO Clara prices, public ranges only with sources; links /ai-seo-agent | |
