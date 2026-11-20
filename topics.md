@@ -44,7 +44,7 @@ Plan from 26 Oct 2026: core focus on the AI LinkedIn Outreach Agent and AI SEO A
 | done | how to book b2b sales meetings on linkedin | Commercial how-to, B2B sales heads, LinkedIn agent; steps + where a human stays; links /ai-linkedin-outreach-agent | 2026-11-18 how-to-book-b2b-sales-meetings-on-linkedin |
 | done | linkedin outreach agent for consultants and agencies | Commercial, global, LinkedIn agent; Sanjeet Ray (business coach) dated proof; links /ai-linkedin-outreach-agent | 2026-11-19 linkedin-outreach-agent-for-consultants-and-agencies |
 | done | ai seo agent for manufacturers and distributors | Commercial, India + global B2B, SEO agent; buyers who research before they call; links /ai-seo-agent | |
-| todo | how much does an ai seo agent cost vs hiring an seo manager | Comparison / ROI, B2B, SEO agent; NO Clara prices, public ranges only with sources; links /ai-seo-agent | |
+| done | how much does an ai seo agent cost vs hiring an seo manager | Comparison / ROI, B2B, SEO agent; NO Clara prices, public ranges only with sources; links /ai-seo-agent | |
 | todo | b2b ai search visibility audit checklist | Commercial how-to, global B2B, SEO agent (GEO cluster); prompt list + tracking method; links /ai-seo-agent and the GEO post | |
 | todo | linkedin ai lead generation | Commercial, global B2B, LinkedIn agent; query already ranking 20-30 in GSC (CoS 16 Nov); what an AI agent does vs tools vs agencies, who it fits; links /ai-linkedin-outreach-agent | |
 | todo | how to get more responses on linkedin outreach | Commercial how-to, global B2B sales heads, LinkedIn agent (cluster gap in before-after.md); message, targeting and follow-up fixes; links /ai-linkedin-outreach-agent | |
