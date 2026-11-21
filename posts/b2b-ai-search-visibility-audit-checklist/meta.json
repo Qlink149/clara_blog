@@ -1,0 +1,27 @@
+{
+  "title": "B2B AI Search Visibility Audit Checklist",
+  "slug": "b2b-ai-search-visibility-audit-checklist",
+  "description": "A B2B AI search visibility audit checklist: build a prompt list, test ChatGPT, Gemini and Google AI answers, log citations and fix the pages that matter.",
+  "date": "2026-11-22",
+  "author": "Yogansh Banthia",
+  "category": "AI SEO Agent · AI Search Visibility",
+  "keyword": "b2b ai search visibility audit checklist",
+  "cluster": "seo",
+  "hero": {"file": "hero.webp", "alt": "B2B AI search visibility audit checklist: a laptop showing an AI answer with a source citation and a ticked checklist", "width": 1600, "height": 904},
+  "fit": {
+    "for": "B2B founders and sales or marketing heads who want to know whether ChatGPT, Gemini and Google AI answers mention their company when buyers research their category, and who want a repeatable checklist rather than guesswork.",
+    "notFit": "Companies looking for a one-off report with no follow-up, anyone hoping for a guaranteed mention in AI answers, or businesses without budget for a paid monthly service.",
+    "results": "Own analytics: +28% organic sessions, 10–25 Oct vs 24 Sep–9 Oct 2026, with a new post published each day. We aim to show you a first demo within 7 days."
+  },
+  "faq_heading": "Questions about a B2B AI search visibility audit",
+  "faqs": [
+    {"q": "How often should I run an AI search visibility audit?", "a": "Monthly is a sensible rhythm for most B2B companies. AI answers change from one day to the next, so a single check tells you little. Run the same prompt list each time and compare."},
+    {"q": "How many prompts should the audit include?", "a": "Start with 20 to 30 prompts that cover your category, your use cases and your comparisons. That is enough to see patterns without turning the audit into a full-time job."},
+    {"q": "Can I guarantee my company appears in AI answers?", "a": "No. No one controls what an AI assistant says. You can improve your odds by publishing clear, factual pages and earning mentions on sources the assistants trust, then measure what changes."},
+    {"q": "Do I need special tools to run the audit?", "a": "Not to begin. A spreadsheet and a fresh browser session for each assistant are enough. Tools can help you repeat the checks at scale later."},
+    {"q": "What does Clara AI's SEO agent do after the audit?", "a": "It turns the gaps into pages: it researches topics, writes and publishes from facts you approve, asks Google to index them, tracks results and sends a weekly update. We aim to show you a first demo within 7 days."}
+  ],
+  "sources": [
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ]
+}
