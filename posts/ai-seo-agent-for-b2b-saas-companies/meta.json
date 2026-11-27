@@ -1,0 +1,48 @@
+{
+  "title": "AI SEO Agent for B2B SaaS Companies",
+  "slug": "ai-seo-agent-for-b2b-saas-companies",
+  "description": "An AI SEO agent for B2B SaaS companies: how it publishes buyer-intent posts daily, gets you cited in AI search, and what dated results to expect.",
+  "date": "2026-11-28",
+  "author": "Yogansh Banthia",
+  "category": "AI SEO Agent · B2B SaaS",
+  "keyword": "ai seo agent for b2b saas companies",
+  "cluster": "seo",
+  "hero": {
+    "file": "hero.webp",
+    "alt": "AI SEO agent for B2B SaaS companies: a laptop showing a published post cited in AI search",
+    "width": 1600,
+    "height": 900
+  },
+  "fit": {
+    "for": "Founders, marketing heads and growth leads at B2B SaaS companies who need steady, buyer-intent content that ranks on Google and gets cited by ChatGPT and other AI search tools, and can pay for a monthly agent instead of hiring a content team.",
+    "notFit": "Consumer apps chasing viral traffic, companies that want a one-off batch of cheap articles, or anyone without budget for a paid monthly service.",
+    "results": "Our own blog: organic sessions up 28% (10–25 Oct vs 24 Sep–9 Oct 2026). First demo within 7 days."
+  },
+  "faq_heading": "Questions B2B SaaS teams ask about an AI SEO agent",
+  "faqs": [
+    {
+      "q": "What does an AI SEO agent do for a B2B SaaS company?",
+      "a": "It picks buyer-intent keywords, writes a post for each, links it to your product and feature pages, publishes on your blog every day and reports what went live on WhatsApp. A person on our team checks the work."
+    },
+    {
+      "q": "Will the posts be generic AI content?",
+      "a": "They should not be. Each post is built from facts you approve: your product, the problem it solves, your buyer and true examples. The agent never invents features, customers or results."
+    },
+    {
+      "q": "Does it help with ChatGPT and AI search, not just Google?",
+      "a": "Yes. Posts open with a direct answer, use clear question headings and FAQs with schema, which makes them easier for AI search tools to quote. This is often called generative engine optimization."
+    },
+    {
+      "q": "Do we need to give it access to our whole website?",
+      "a": "No. It usually needs access to your blog or CMS only. Product pages and the main site stay under your team's control."
+    },
+    {
+      "q": "How soon can we see whether it works for us?",
+      "a": "We aim to show you a first demo within 7 days. After going live, judge it over two to three months on impressions, clicks on buyer keywords, AI-search mentions and demo requests from the blog."
+    }
+  ],
+  "sources": [
+    "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+  ]
+}
